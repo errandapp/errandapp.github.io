@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, user-scalable=no">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <meta name="theme-color" content="#4875c9" />
+   <title>Swift</title>
+   <script src="scpt/jquery-3.6.1.min.js"></script>
+   <style>
+      html,
+      body {
+         margin: 0;
+         padding: 0;
+         background-color: #ffffff;
+         height: 100%;
+         overflow: hidden;
+      }
+/* 
+      path{
+         -webkit-filter: drop-shadow( -4px -4px 10px #3867B9 );
+         filter:  drop-shadow( -5px -5px 10px #3867B9 );
+      } */
+
+      ::-webkit-scrollbar {
+         display: none;
+      }
+
+
+      path {
+         stroke: none;
+         fill: #4875c9;
+      }
+
+      svg {
+         box-sizing: border-box;
+         background-color: #ffffff;
+         height:  80%;
+         width: 100%;
+      }
+
+      #bkground {
+         height: 100%;
+         width: 100%;
+      }
+
+      path {
+         width: 100%;
+      }
+
+      #fsection{
+         width: 100%;
+         height: 40%;
+         border: 1px dotted red;
+         position: absolute;
+         top: 60%;
+      }
+   </style>
+</head>
+
+<body>
+   <main id="bkground">
+   </main>
+   <section  id='fsection'>
+      hey
+   </section>
+
+   <script>
+      let windowHeight = $(window).innerHeight();
+      let windowWidth = $(window).innerWidth();
+      let ctrlWidth = 159 - windowWidth;
+      let windowHeightCenter = windowHeight / 1.35;
+
+      $('#bkground').append('<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" style="enable-background:new 0 0 50 50;" xml:space="preserve"><path stroke-linejoin="round" stroke-linecap="round" d="M 0 0 \
+      h '+ windowWidth + ' \
+      c 0 114.7 0 229.4 0 '+ windowHeightCenter + ' \
+      c 0 6 0 12.1 0 18.1 \
+      c 0 1 -1.5 1.2 -1.8 0.2 \
+      c -1.6 -5.4 -3 -10.8 -4.7 -16.2 \
+      c -11.9 -37.8 -38.1 -57.1 -77.3 -57.1 \
+      c -61.6 0 -123.3 0.1 '+ ctrlWidth + ' 0 \
+      c -44.9 -0.1 -75.2 -30.2 -75.3 -75.2 \
+      V 0 \
+      z"></svg>')
+   </script>
+</body>
+
+</html>
