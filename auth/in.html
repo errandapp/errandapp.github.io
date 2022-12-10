@@ -18,9 +18,14 @@
          overflow: hidden;
       }
 
+      *{
+         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+   
       #return{
          display: none;
-         font-size: medium;
+         font-size: small;
       }
 
       @media (min-width: 769px) {
@@ -34,6 +39,7 @@
 
          #return{
             display: inline;
+            padding: 5px;
          }
       }
 
@@ -83,7 +89,9 @@
    </main>
    <section  id='fsection'>
    </section>
-   <span id="return">Swift: I'm a mobile app..</span>
+   <span id="return">
+      <span style="font-size: 150%; font-weight:bold;">Swift Courier</span>
+      <br>&nbsp; I'm an app, use your mobile device instead.</span>
    <script>
       let windowHeight = $(window).innerHeight();
       let windowWidth = $(window).innerWidth();
