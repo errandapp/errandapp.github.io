@@ -18,6 +18,17 @@
          overflow: hidden;
       }
 
+      #return{
+         display: none;
+         font-size: medium;
+      }
+
+      @media (max-width: 769px) {
+         #return{
+            display: inline;
+         }
+      }
+
       /* path{
          -webkit-filter: drop-shadow( -4px -4px 10px #3867B9 );
          filter:  drop-shadow( -5px -5px 10px #3867B9 );
@@ -64,7 +75,7 @@
    </main>
    <section  id='fsection'>
    </section>
-
+   <span id="return">Swift: It's an app</span>
    <script>
       let windowHeight = $(window).innerHeight();
       let windowWidth = $(window).innerWidth();
