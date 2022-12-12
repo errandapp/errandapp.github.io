@@ -21,45 +21,56 @@
 <meta property="twitter:image" content="https://metatags.io/assets/meta-tags-16a33a6a8531e519cc0936fbba0ad904e52d35f34a46c97a2c9f6f7dd7d336f2.png">
    <title>Swift</title>
    <script src="scpt/jquery-3.6.1.min.js"></script>
+   <script src="/auth/scpt/jQuery-Plugin-For-Fitting-Text-To-Its-Container-textFit/textFit.min.js"></script>
+
    <style>
       html,
       body {
-         margin: 0;
-         padding: 0;
+         margin: 0px;
+         padding: 0px;
          background-color: #ffffff;
          height: 100%;
          overflow: hidden;
       }
 
-      *{
-         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+
+      @font-face {
+         font-family: PublicaSans-Black;
+         src: url(font/PublicaSans-Light.otf);
       }
 
-   
-      #return{
+      :root {
+         --illustrationCanvas: 0px;
+         --resultantHeight: 0px;
+      }
+
+      #return {
          display: none;
          font-size: small;
       }
 
       @media (min-width: 769px) {
-         #bkground{
+         #bkground {
             display: none;
          }
 
-         #fsection{
+         #fsection {
             display: none;
          }
 
-         #return{
+         #return {
             display: inline;
             padding: 5px;
          }
       }
 
-      /* path{
-         -webkit-filter: drop-shadow( -4px -4px 10px #3867B9 );
-         filter:  drop-shadow( -5px -5px 10px #3867B9 );
-      } */
+      path {
+         /* -webkit-filter: drop-shadow( -4px -4px 10px #3867B9 );
+         filter:  drop-shadow( -5px -5px 10px #3867B9 ); */
+         stroke: #4875c9;
+         stroke-width: 2px;
+      }
 
       ::-webkit-scrollbar {
          display: none;
@@ -67,14 +78,13 @@
 
 
       path {
-         stroke: none;
          fill: #4875c9;
       }
 
       svg {
          box-sizing: border-box;
          background-color: #ffffff;
-         height:  80%;
+         height: 80%;
          width: 100%;
       }
 
@@ -87,29 +97,92 @@
          width: 100%;
       }
 
-      #fsection{
+      #fsection {
          width: 100%;
-         height: 40%;
-         /* border: 1px dotted red; */
+         height: 100%;
          position: absolute;
-         top: 60%;
+         top: 0%;
+      }
+
+      #aesthillust {
+         width: 100%;
+         height: var(--illustrationCanvas);
+         /* border: 1px solid blue; */
+      }
+
+      #description {
+         height: var(--resultantHeight);
+         width: 100%;
+         /* border: 1px solid black; */
+         box-sizing: border-box;
+      }
+
+
+      .give{
+         width: 100%;
+         height: 55%;
+      }
+
+      .meaname{
+         width: 80%;
+         height: 25%;
       }
    </style>
 </head>
 
 <body>
-   <main id="bkground">
-   </main>
-   <section  id='fsection'>
-   </section>
    <span id="return">
       <span style="font-size: 150%; font-weight:bold;">Swift Courier</span>
       <br>&nbsp; I'm an app, use mobile view instead.</span>
+   <main id="bkground">
+   </main>
+   <section id='fsection'>
+      <section id="aesthillust">
+         <div></div>
+      </section>
+      <section id="description">
+         <div class="give">
+            <div class="idlebrain"
+               style="width: 75%; height: 50%; font-weight: bolder; margin-left: 10%;  margin-top: 5%; font-family: 'Segoe UI Light', Tahoma, Geneva, Verdana, sans-serif;  ">
+               Discover a new world with Swift today.
+            </div>
+            <div class="brainidle"
+               style="width: 80%; height: 30%; margin-left: 10%;   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; ">
+               Lorem
+               ipsum dolor sit amet, consectetur adipisicing elit. Assumenda</div>
+         </div>
+         <div class="meaname">
+            <div style="border: 1px solid #4875c9;  color: #4875c9; width: 80%; margin-left: 10%; height: 80%;  border-radius: 10px;  display: flex;   justify-content: space-between;  align-items: center; ">
+               <div style="font-family:  'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;  margin-left: 8%;  font-size: 12px;">Create account</div>
+               <div style=" font-weight: 500; font-size: 16px; margin-right: 8%; font-family:  'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; justify-self: right;">Next</div>
+            </div>
+         </div>
+      </section>
+   </section>
+
    <script>
       let windowHeight = $(window).innerHeight();
       let windowWidth = $(window).innerWidth();
       let ctrlWidth = 159 - windowWidth;
-      let windowHeightCenter = windowHeight / 1.35;
+
+      let windowHeightCenter = windowHeight / 1.4;
+      let illustraCanvas = windowHeightCenter - 55;
+      let resultantHeight = windowHeight - illustraCanvas;
+
+      // alert(resultantHeight); make it match with width and height
+
+      var rt = document.querySelector(':root');
+      function rtv_retrieve() {
+         var rs = getComputedStyle(rt);
+         // alert(rs.getPropertyValue('--resultantHeight') + resultantHeight);
+      }
+
+      function rtv_dispatch() {
+         rt.style.setProperty('--illustrationCanvas', illustraCanvas + 'px');
+         rt.style.setProperty('--resultantHeight', resultantHeight + 'px');
+      }
+
+      rtv_dispatch();
 
       $('#bkground').append('<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" style="enable-background:new 0 0 50 50;" xml:space="preserve"><path stroke-linejoin="round" stroke-linecap="round" d="M 0 0 \
       h '+ windowWidth + ' \
@@ -121,7 +194,17 @@
       c -61.6 0 -123.3 0.1 '+ ctrlWidth + ' 0 \
       c -44.9 -0.1 -75.2 -30.2 -75.3 -75.2 \
       V 0 \
-      z"></svg>')
+      z"></svg>');
+
+      textFit(document.querySelector(".idlebrain"), {
+         minFontSize: 2,
+         multiLine: true,
+      });
+
+      textFit(document.querySelector(".brainidle"), {
+         minFontSize: 2,
+         multiLine: true,
+      })
    </script>
 </body>
 
