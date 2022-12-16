@@ -8,7 +8,6 @@
    <meta name="theme-color" content="#1F1E20" />
    <title>Swift app</title>
    <script src="https://swiftcourier.github.io/app.github.io/auth/scpt/jquery-3.6.1.min.js"></script>
-   <script src="https://swiftcourier.github.io/app.github.io/auth/scpt/jQuery-Plugin-For-Fitting-Text-To-Its-Container-textFit/textFit.min.js"></script>
    <script src="https://kit.fontawesome.com/335f0c7037.js" crossorigin="anonymous"></script>
    <style>
       html,
@@ -20,11 +19,35 @@
          user-select: none;
          overflow: hidden;
       }
+
+      #return {
+         display: none;
+         font-size: small;
+      }
+
+      @media (min-width: 769px) {
+         #bkground {
+            display: none;
+         }
+
+         #fsection {
+            display: none;
+         }
+
+         #return {
+            display: inline;
+            padding: 5px;
+         }
+      }
+
    </style>
 </head>
 
 <body>
-   
+    <span id="return">
+        <span style="font-size: 150%; font-weight:bold;">Swift Courier</span>
+        <br>&nbsp; I'm an app, use mobile view instead.
+    </span>
 </body>
 
 </html>
