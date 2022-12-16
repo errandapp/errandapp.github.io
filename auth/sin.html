@@ -10,11 +10,10 @@
    <script src="https://swiftcourier.github.io/app.github.io/auth/scpt/jquery-3.6.1.min.js"></script>
    <script src="https://kit.fontawesome.com/335f0c7037.js" crossorigin="anonymous"></script>
    <style>
-    html,
+      html,
       body {
          margin: 0px;
          padding: 0px;
-         background-color: #ffffff;
          height: 100%;
          user-select: none;
          overflow: hidden;
@@ -53,6 +52,7 @@
       #tsect{
         width: 100%;
         height:  30%;
+        background:  #1F1E20;
       }
 
       #bsect{
@@ -62,14 +62,14 @@
         background-color:  #ffffff;
       }
 
-     
     .headtag{
       border: 1px solid black;
       width: 100%;
-      height: 40%;
+      height: 10%;
       text-align: center;
       position: relative;
       top:  30px;
+      
     }
    </style>
 </head>
@@ -82,19 +82,16 @@
     <main id="bkground">
         <section id="tsect"></section>
         <section id="bsect">
-            <div class="headtag">Hello</div>
-            <div class="loginfield"></div>
+            <div class="headtag">Hello </div>
+            <!-- <div class="loginfield"></div>
             <div class="otptions"></div>
-            <div class="gotosup"></div>
+            <div class="gotosup"></div> -->
         </section>
     </main>
     <script>
         textFit(document.querySelector(".headtag"), {
          minFontSize: 2,
-         multiLine: true,
       });
     </script>
 </body>
-
 </html>
-
