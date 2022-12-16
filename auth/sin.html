@@ -63,13 +63,24 @@
         background-color:  #ffffff;
       }
 
-    .headtag{
+      .headtag{
       width: 100%;
-      height: 5%;
+      height: 7%;
       text-align: center;
-      position: relative;
-      top: 30px;
     }
+
+    .tagline{
+      width:  50%;
+      height: 4%;
+      margin-left:  25%;
+      text-align: center;
+    }
+
+    .margin{
+      width: 100%;
+      height: 60px;
+    }
+
    </style>
 </head>
 
@@ -81,14 +92,20 @@
     <main id="bkground">
         <section id="tsect"></section>
         <section id="bsect">
-            <div class="headtag">Hello </div>
-            <!-- <div class="loginfield"></div>
+         <div class="margin"></div>
+            <div class="headtag">Hi there! </div>
+            <div class="tagline">Welcome back, it's nice seeing you again</div>
+            <div class="loginfield"></div>
             <div class="otptions"></div>
-            <div class="gotosup"></div> -->
+            <div class="gotosup"></div>
         </section>
     </main>
     <script>
         textFit(document.querySelector(".headtag"), {
+         minFontSize: 2,
+      });
+
+      textFit(document.querySelector(".tagline"), {
          minFontSize: 2,
       });
     </script>
