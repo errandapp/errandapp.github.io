@@ -21,78 +21,79 @@
     }
 
     *{
-      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    }
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+      }
 
-    #return {
-       display: none;
-       font-size: small;
-    }
+      #return {
+         display: none;
+         font-size: small;
+      }
 
-    @media (min-width: 769px) {
-       #bkground {
-          display: none;
-       }
+      @media (min-width: 769px) {
+         #bkground {
+            display: none;
+         }
 
-       #fsection {
-          display: none;
-       }
+         #fsection {
+            display: none;
+         }
 
-       #return {
-          display: inline;
-          padding: 5px;
-       }
-    }
+         #return {
+            display: inline;
+            padding: 5px;
+         }
+      }
 
-    #bkground{
-      width: 100%;
-      height: 100%;
-      background:  #1F1E20;
-    }
+      #bkground{
+        width: 100%;
+        height: 100%;
+        background:  #1F1E20;
+      }
 
-    #tsect{
-      width: 100%;
-      height:  30%;
-    }
+      #tsect{
+        width: 100%;
+        height:  30%;
+      }
 
-    #bsect{
-      width: 100%;
-      height:  70%;
-      border-top-left-radius: 60px;
-      background-color:  #ffffff;
-    }
+      #bsect{
+        width: 100%;
+        height:  70%;
+        border-top-left-radius: 60px;
+        background-color:  #ffffff;
+      }
 
-    .headtag{
-      width: 100%;
-      text-align: center;
-      height: 20%;
-      /* border: 1px solid black; */
-      box-sizing: border-box;
-      padding-top:  15%;
-    }
- </style>
+      .headtag{
+        width: 100%;
+        text-align: center;
+        height: 40px;
+        position: relative;
+        top:  50px;
+        border: 1px solid black;
+        box-sizing: border-box;
+      }
+   </style>
 </head>
 
 <body>
-  <span id="return">
-      <span style="font-size: 150%; font-weight:bold;">Swift Courier</span>
-      <br>&nbsp; I'm an app, use mobile view instead.
-  </span>
-  <main id="bkground">
-      <section id="tsect"></section>
-      <section id="bsect">
-          <div class="headtag">Hello</div>
-          <div class="loginfield"></div>
-          <div class="otptions"></div>
-          <div class="gotosup"></div>
-      </section>
-  </main>
-  <script>
-      textFit(document.querySelector(".headtag"), {
-       minFontSize: 20,
-       multiLine: true,
-    });
-  </script>
+    <span id="return">
+        <span style="font-size: 150%; font-weight:bold;">Swift Courier</span>
+        <br>&nbsp; I'm an app, use mobile view instead.
+    </span>
+    <main id="bkground">
+        <section id="tsect"></section>
+        <section id="bsect">
+            <div class="headtag">Hello</div>
+            <div class="loginfield"></div>
+            <div class="otptions"></div>
+            <div class="gotosup"></div>
+        </section>
+    </main>
+    <script>
+        textFit(document.querySelector(".headtag"), {
+         minFontSize: 20,
+         multiLine: true,
+      });
+    </script>
 </body>
 
 </html>
