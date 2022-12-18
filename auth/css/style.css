@@ -43,7 +43,7 @@ div.input-block span.placeholder {
 
   font-size: 1.6rem;
 
-  bottom: 0;
+  top: 20px;
   left: 17px;
 
   transition: all 0.2s;
