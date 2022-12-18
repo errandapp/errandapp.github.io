@@ -60,7 +60,7 @@ background: #fff;
 
 div.input-block input:focus{
 color: #1F1E20;
-border-color: #1F1E20;
+border-color: #161F29;
 }
 
 div.input-block input:focus + span.placeholder {
