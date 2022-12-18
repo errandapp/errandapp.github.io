@@ -11,198 +11,201 @@
    <script src="https://kit.fontawesome.com/335f0c7037.js" crossorigin="anonymous"></script>
    <script
       src="https://swiftcourier.github.io/app.github.io/auth/scpt/jQuery-Plugin-For-Fitting-Text-To-Its-Container-textFit/textFit.min.js"></script>
-   <link rel="stylesheet" href="css/style.css">
-   <style>
-      html,
-      body {
-         margin: 0px;
-         padding: 0px;
-         height: 100%;
-         user-select: none;
-      }
-
-      ::-webkit-input-placeholder{
-         font-size: 1.6rem;
-         font-family: Roboto, sans-serif;
-         font-weight: normal;
-         color:  #6c757d;
-       }
-
-      * {
-         font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-      }
-
-
-
-      #return {
-         display: none;
-         font-size: small;
-      }
-
-      @media (min-width: 769px) {
-         #bkground {
-            display: none;
+      <link rel="stylesheet" href="css/style.css">
+      <style>
+         html,
+         body {
+            margin: 0px;
+            padding: 0px;
+            height: 100%;
+            user-select: none;
          }
-
-         #fsection {
-            display: none;
+   
+         ::-webkit-input-placeholder{
+            font-size: 1.6rem;
+            font-family: Roboto, sans-serif;
+            font-weight: normal;
+            color:  #6c757d;
+          }
+   
+         * {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
          }
-
+   
+   
+   
          #return {
-            display: inline;
-            padding: 5px;
+            display: none;
+            font-size: small;
          }
-      }
-
-      #bkground {
-         width: 100%;
-         height: 100%;
-         background: #161F29;
-      }
-
-      #tsect {
-         width: 100%;
-         height: 25%;
-         background: #161F29;
-         display: flex;
-         align-items: center;
-         background-color: transparent;
-         justify-content: center;
-      }
-
-      #bsect {
-         width: 100%;
-         height: 75%;
-         border-top-left-radius: 60px;
-         background-color: #ffffff;
-      }
-
-      .headtag {
-         width: 100%;
-         background-color: transparent;
-         height: 6%;
-         text-align: center;
-      }
-
-      .margin {
-         width: 100%;
-         height: 40px;
-         background-color: transparent;
-      }
-
-      .loginfield {
-         width: 80%;
-         padding: 5px;
-         background-color: transparent;
-         margin-left: 10%;
-         margin-top: 4%;
-         border: 1px solid rgb(255, 255, 255);
-      }
-
-      img {
-         background-color: transparent;
-      }
-
-      #submit {
-         width: 100%;
-         height: 50px;
-         outline: none;
-         color: white;
-         font-size: 1.6rem;
-         background-color: #161F29;
-         border: none;
-         opacity: 0.9;
-         border-radius: 10px;
-      }
-   </style>
-</head>
-
-<body>
-   <span id="return">
-      <span style="font-size: 150%; font-weight:bold;">Swift Courier</span>
-      <br>&nbsp; I'm an app, use mobile view instead.
-   </span>
-   <main id="bkground">
-      <section id="tsect">
-         <img src="imgs/PngItem_5567529.png" width="70px" alt="" srcset="">
-      </section>
-      <section id="bsect">
-         <div class="margin"></div>
-         <div class="headtag">Hey up! </div>
-         <div class="loginfield">
-            <form action="app" method="post" id="validate">
-               <div class="input-block">
-                  <input type="text" class="email" autocomplete="off" spellcheck="false" name="input-text" class="inp"
-                     placeholder="" id="input-text" required spellcheck="false">
-                  <span class="placeholder">
-                     Email
-                  </span>
-               </div>
-               <div class="input-block">
-                  <input type="password" class="password" placeholder="" name="input-text" id="input-text" required
-                     spellcheck="false">
-                  <span class="placeholder">
-                     Password
-                  </span>
-               </div>
-               <input id="submit" disabled="disabled" type="submit" value="Next"> <!--  -->
-            </form>
-         </div>
-         <div class="otptions"></div>
-         <div class="gotosup"></div>
-      </section>
-   </main>
-   <script>
-      textFit(document.querySelector(".headtag"), {
-         minFontSize: 2,
-         multiLine: true,
-      });
-
-      textFit(document.querySelector(".placeholder"), {
-         minFontSize: 2,
-         multiLine: true,
-      });
-
-      let windowHeight = $(window).innerHeight();
-      var iable = windowHeight / 10;
-      var iety = iable / 5;
-
-      $(".email").focus(function () {
-         $(".email").attr("placeholder", "earth@milkyway.com")
-      })
-
-      $(".email").focusout(function () {
-         $(".email").attr("placeholder", "")
-      })
-
-      $(".password").focus(function () {
-         $(".password").attr("placeholder", "● ● ● ● ● ● ●")
-      })
-
-      $(".password").focusout(function () {
-         $(".password").attr("placeholder", "")
-      })
-
-      $(document).ready(function () {
-         var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-         empty = true;
-
-         $('input').keyup(function () {
-            var empty = false;
-            $('input').each(function () {
-               if ($(this).val().length == 0 || $(this).val() == " " || !document.querySelector(".email").value.match(validRegex)) {
-                  empty = true;
+   
+         @media (min-width: 769px) {
+            #bkground {
+               display: none;
+            }
+   
+            #fsection {
+               display: none;
+            }
+   
+            #return {
+               display: inline;
+               padding: 5px;
+            }
+         }
+   
+         #bkground {
+            width: 100%;
+            height: 100%;
+           background: #161F29;
+         }
+   
+         #tsect {
+            width: 100%;
+            height: 25%;
+            background: #161F29;
+            display: flex;
+            align-items: center;
+            background-color: transparent;
+            justify-content: center;
+         }
+   
+         #bsect {
+            width: 100%;
+            height: 75%;
+            border-top-left-radius: 60px;
+            background-color: #ffffff;
+         }
+   
+         .headtag {
+            width: 100%;
+            background-color: transparent;
+            height: 6%;
+            text-align: center;
+         }
+   
+         .margin {
+            width: 100%;
+            height: 40px;
+            background-color: transparent;
+         }
+   
+         .loginfield {
+            width: 80%;
+            padding: 5px;
+            background-color: transparent;
+            margin-left: 10%;
+            margin-top: 4%;
+            border: 1px solid rgb(255, 255, 255);
+         }
+   
+         img {
+            background-color: transparent;
+         }
+   
+         #submit {
+            width: 100%;
+            height: 50px;
+            outline: none;
+            color: white;
+            font-size: 1.6rem;
+            background-color: #161F29;
+            border: none;
+            border-radius: 10px;
+         }
+   
+         input{
+            margin-top: 15px;
+         }
+      </style>
+   </head>
+   
+   <body>
+      <span id="return">
+         <span style="font-size: 150%; font-weight:bold;">Swift Courier</span>
+         <br>&nbsp; I'm an app, use mobile view instead.
+      </span>
+      <main id="bkground">
+         <section id="tsect">
+            <img src="imgs/PngItem_5567529.png" width="70px" alt="" srcset="">
+         </section>
+         <section id="bsect">
+            <div class="margin"></div>
+            <div class="headtag">Hey up! </div>
+            <div class="loginfield">
+               <form action="app" method="post" id="validate">
+                  <div class="input-block">
+                     <input type="text" class="email" autocomplete="off" spellcheck="false" name="input-text" class="inp"
+                        placeholder="" id="input-text" required spellcheck="false">
+                     <span class="placeholder">
+                        Email
+                     </span>
+                  </div>
+                  <div class="input-block">
+                     <input type="password" class="password" placeholder="" name="input-text" id="input-text" required
+                        spellcheck="false">
+                     <span class="placeholder">
+                        Password
+                     </span>
+                  </div>
+                  <input id="submit" disabled="disabled" type="submit" value="Next"> <!--  -->
+               </form>
+            </div>
+            <div class="otptions"></div>
+            <div class="gotosup"></div>
+         </section>
+      </main>
+      <script>
+         textFit(document.querySelector(".headtag"), {
+            minFontSize: 2,
+            multiLine: true,
+         });
+   
+         textFit(document.querySelector(".placeholder"), {
+            minFontSize: 2,
+            multiLine: true,
+         });
+   
+         let windowHeight = $(window).innerHeight();
+         var iable = windowHeight / 10;
+         var iety = iable / 5;
+   
+         $(".email").focus(function () {
+            $(".email").attr("placeholder", "me@email.com")
+         })
+   
+         $(".email").focusout(function () {
+            $(".email").attr("placeholder", "")
+         })
+   
+         $(".password").focus(function () {
+            $(".password").attr("placeholder", "● ● ● ● ● ● ●")
+         })
+   
+         $(".password").focusout(function () {
+            $(".password").attr("placeholder", "")
+         })
+   
+         $(document).ready(function () {
+            var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+            empty = true;
+   
+            $('input').keyup(function () {
+               var empty = false;
+               $('input').each(function () {
+                  if ($(this).val().length == 0 || $(this).val() == " " || !document.querySelector(".email").value.match(validRegex)) {
+                     empty = true;
+                  }
+               });
+   
+               if (empty) {
+                  $('input[type="submit"]').attr('disabled', 'disabled');
+               } else {
+                  $('input[type="submit"]').removeAttr('disabled');
                }
             });
-
-            if (empty) {
-               $('input[type="submit"]').attr('disabled', 'disabled');
-            } else {
-               $('input[type="submit"]').removeAttr('disabled');
-            }
          });
-      });
-   </script>
-</body>
-
-</html>
+      </script>
+   </body>
+   
+   </html>

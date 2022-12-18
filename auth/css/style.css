@@ -26,7 +26,7 @@ div.input-block input {
   width: 100%;
   padding: 15px 15px;
   border-radius: 1rem;
-  border: 2px solid#161f29be;
+  border: 2px solid  #161f29e8;
   outline:none;
 }
 
@@ -43,7 +43,7 @@ div.input-block span.placeholder {
 
   font-size: 1.6rem;
 
-  top: 0;
+  bottom: 0;
   left: 17px;
 
   transition: all 0.2s;
