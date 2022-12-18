@@ -21,12 +21,12 @@ div.input-block {
 div.input-block input {
   font-weight: 500;
   font-size: 1.6rem;
-  color: #495055;
+  color: #1F1E20;
   height: 57px;
   width: 100%;
   padding: 15px 15px;
   border-radius: 1rem;
-  border: 2px solid #1f1e2081;
+  border: 2px solid  #161f2993;
   outline:none;
 }
 
