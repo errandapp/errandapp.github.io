@@ -175,8 +175,9 @@
                   <span class="placeholder" style="position: absolute; top: -10px;">
                      Password
                   </span>
-               </div>
-               <div class="viewpass"><i class="fa-solid fa-lock" style="color: #161f29e8; font-size: 18px;"></i></div>
+               </div> <!--this-->
+               <div class="viewpass"><i id="passicon" class="fas fa-eye-slash"
+                     style="color: #161f29e8; font-size: 18px;"></i></div>
                <input id="submit" disabled="disabled" type="submit" value="Sign in"> <!--  -->
             </form>
          </div>
@@ -223,6 +224,26 @@
                $('input[type="submit"]').removeAttr('disabled');
             }
          });
+      });
+
+
+      $('.viewpass').click(function () {
+         if ($('#passicon').hasClass('fa-eye-slash')) {
+
+            $('#passicon').removeClass('fa-eye-slash');
+
+            $('#passicon').addClass('fa-eye');
+
+            $('.password').attr('type', 'text');
+
+         } else {
+
+            $('#passicon').removeClass('fa-eye');
+
+            $('#passicon').addClass('fa-eye-slash');
+
+            $('.password').attr('type', 'password');
+         }
       });
    </script>
 </body>
