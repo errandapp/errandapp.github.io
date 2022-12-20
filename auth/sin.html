@@ -11,241 +11,305 @@
    <script src="https://kit.fontawesome.com/335f0c7037.js" crossorigin="anonymous"></script>
    <script
       src="https://swiftcourier.github.io/app.github.io/auth/scpt/jQuery-Plugin-For-Fitting-Text-To-Its-Container-textFit/textFit.min.js"></script>
-   <link rel="stylesheet" href="css/style.css">
-   <style>
-      html,
-      body {
-         margin: 0px;
-         padding: 0px;
-         height: 100%;
-         user-select: none;
-      }
-
-      ::-webkit-input-placeholder {
-         font-size: 1.6rem;
-         font-family: Roboto, sans-serif;
-         font-weight: normal;
-         color: #6c757d;
-      }
-
-      * {
-         font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-      }
-
-
-
-      #return {
-         display: none;
-         font-size: small;
-      }
-
-      @media (min-width: 769px) {
-         #bkground {
-            display: none;
+      <link rel="stylesheet" href="css/style.css">
+      <style>
+         html,
+         body {
+            margin: 0px;
+            padding: 0px;
+            height: 100%;
+            user-select: none;
          }
-
-         #fsection {
-            display: none;
+   
+         ::-webkit-input-placeholder {
+            font-size: 1.6rem;
+            font-family: Roboto, sans-serif;
+            font-weight: normal;
+            color: #6c757d;
          }
-
+   
+         * {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+         }
+   
+   
+   
          #return {
-            display: inline;
-            padding: 5px;
+            display: none;
+            font-size: small;
          }
-      }
-
-      #bkground {
-         width: 100%;
-         height: 100%;
-         background: #161F29;
-      }
-
-      #tsect {
-         width: 100%;
-         height: 25%;
-         background: #161F29;
-         display: flex;
-         align-items: center;
-         background-color: transparent;
-         justify-content: center;
-      }
-
-      #bsect {
-         width: 100%;
-         height: 75%;
-         border-top-left-radius: 60px;
-         background-color: #ffffff;
-      }
-
-      .headtag {
-         width: 100%;
-         background-color: transparent;
-         height: 6%;
-         text-align: center;
-      }
-
-      .margin {
-         width: 100%;
-         height: 10px;
-         background-color: transparent;
-      }
-
-      .loginfield {
-         width: 80%;
-         padding: 5px;
-         background-color: transparent;
-         margin-left: 10%;
-         margin-top: 4%;
-      }
-
-      img {
-         background-color: transparent;
-      }
-
-      #submit {
-         width: 100%;
-         height: 50px;
-         outline: none;
-         color: white;
-         font-size: 1.6rem;
-         background-color: #161F29;
-         border: none;
-         border-radius: 10px;
-      }
-
-
-      #submit {
-         position: relative;
-         bottom: 30px;
-      }
-
-      .viewpass {
-         float: right;
-         height: 57px;
-         width: 40px;
-         display: flex;
-         background: transparent;
-         align-items: center;
-         justify-content: center;
-         position: relative;
-         bottom: 70px;
-      }
-
-      .viewpas {
-         float: right;
-         height: 57px;
-         width: 40px;
-         display: flex;
-         align-items: center;
-         background: transparent;
-         justify-content: center;
-         position: relative;
-         z-index: 1;
-         top: 12px;
-      }
-   </style>
-</head>
-
-<body>
-   <span id="return">
-      <span style="font-size: 150%; font-weight:bold;">Swift Courier</span>
-      <br>&nbsp; I'm an app, use mobile view instead.
-   </span>
-   <main id="bkground">
-      <section id="tsect">
-         <img src="imgs/PngItem_5567529.png" width="70px" alt="" srcset="">
-      </section>
-      <section id="bsect">
-         <div class="margin"></div>
-         <div class="loginfield">
-            <form action="app" method="post" id="validate">
-               <div class="viewpas"><i class="fa-solid fa-envelope" style="color: #161f29e8; font-size: 18px;"></i>
+   
+         @media (min-width: 769px) {
+            #bkground {
+               display: none;
+            }
+   
+            #fsection {
+               display: none;
+            }
+   
+            #return {
+               display: inline;
+               padding: 5px;
+            }
+         }
+   
+         #bkground {
+            width: 100%;
+            height: 100%;
+            background: #161F29;
+         }
+   
+         #tsect {
+            width: 100%;
+            height: 25%;
+            background: #161F29;
+            display: flex;
+            align-items: center;
+            background-color: transparent;
+            justify-content: center;
+         }
+   
+         #bsect {
+            width: 100%;
+            height: 75%;
+            border-top-left-radius: 60px;
+            background-color: #ffffff;
+         }
+   
+         .headtag {
+            width: 100%;
+            background-color: transparent;
+            height: 6%;
+            text-align: center;
+         }
+   
+         .margin {
+            width: 100%;
+            height: 10px;
+            background-color: transparent;
+         }
+   
+         .loginfield {
+            width: 80%;
+            padding: 5px;
+            background-color: transparent;
+            margin-left: 10%;
+            margin-top: 4%;
+         }
+   
+         img {
+            background-color: transparent;
+         }
+   
+         #submit {
+            width: 100%;
+            height: 45px;
+            outline: none;
+            color: white;
+            font-size: 1.6rem;
+            background-color: #161F29;
+            border: none;
+            border-radius: 10px;
+            border-bottom-left-radius:  0px;
+         }
+   
+   
+         #submit {
+            position: relative;
+            bottom: 45px;
+         }
+   
+         .viewpass {
+            float: right;
+            height: 57px;
+            width: 40px;
+            display: flex;
+            background: transparent;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            bottom: 71px;
+         }
+   
+         .viewpas {
+            float: right;
+            height: 57px;
+            width: 40px;
+            display: flex;
+            align-items: center;
+            background: transparent;
+            justify-content: center;
+            position: relative;
+            z-index: 1;
+            top: 12px;
+         }
+   
+         .gotosup{
+            position: relative;
+            bottom:  55px;
+            width:  100%;
+            height: auto;
+            background-color:  transparent;
+            padding:  5px;
+         }
+   
+         legend{
+            text-align: center;
+            font-size:  1.25rem;
+            padding:  5px;
+         }
+   
+         fieldset{
+            border:  none;
+            width: 50%;
+            margin-left:  25%;
+            margin-top: 10px;
+            border-top: 1px solid rgb(153, 153, 153);
+         }
+   
+         #submit{
+            opacity:  0.5;
+         }
+   
+         .loginwiths{
+            width:  100%;
+            padding: 5px;
+            height: auto;
+         }
+   
+         .lgmethods{
+            width:  100%;
+            height:  30px;
+            display:   flex;
+            align-items: center;
+            justify-content: center;
+         }
+   
+         .lg{
+            height: 30px;
+            width:  30px;
+            border: 1px solid black;
+            margin-left:  15px; margin-right:  15px;
+         }
+      </style>
+   </head>
+   
+   <body>
+      <span id="return">
+         <span style="font-size: 150%; font-weight:bold;">Swift Courier</span>
+         <br>&nbsp; I'm an app, use mobile view instead.
+      </span>
+      <main id="bkground">
+         <section id="tsect">
+            <img src="imgs/PngItem_5567529.png" width="70px" alt="" srcset="">
+         </section>
+         <section id="bsect">
+            <div class="margin"></div>
+            <div class="loginfield">
+               <form action="app" method="post" id="validate">
+                  <div class="viewpas"><i class="fa-solid fa-envelope" style="color: #161f29e8; font-size: 18px;"></i>
+                  </div>
+                  <div class="input-block">
+                     <input type="text" class="email" style="position: relative; bottom:  45px;" autocomplete="off"
+                        spellcheck="false" name="input-text" class="inp" placeholder="" id="input-text" required
+                        spellcheck="false">
+                     <span class="placeholder">
+                        Email
+                     </span>
+                  </div>
+                  <div class="input-block">
+                     <input type="password" class="password" placeholder="" style="position: relative; bottom: 12.5px;"
+                        name="input-text" id="input-text" required spellcheck="false">
+                     <span class="placeholder" style="position: absolute; top: -10px;">
+                        Password
+                     </span>
+                  </div> <!--this-->
+                  <div style="width: 100%; height: 1.7rem; ">
+                     <span style="font-size: 1.25rem; float: right; background-color: transparent; color: black; margin-right:  0%;">Recover password</span></div>
+                  <div class="viewpass"><i id="passicon" class="fas fa-eye-slash"
+                        style="color: #161f29e8; font-size: 18px;"></i></div>
+                  <input id="submit" disabled="disabled" type="submit" value="Sign in"> <!--  -->
+               </form>
+            </div>
+            <div class="gotosup">
+               <div style="width: 100%; height: max-content;"><fieldset>
+                  <legend>Or continue with</legend>
+               </fieldset></div>
+               <div class="loginwiths">
+                  <div class="lgmethods">
+                     <div class="lg"></div><div class="lg"></div><div class="lg"></div>
+                  </div>
                </div>
-               <div class="input-block">
-                  <input type="text" class="email" style="position: relative; bottom:  45px;" autocomplete="off"
-                     spellcheck="false" name="input-text" class="inp" placeholder="" id="input-text" required
-                     spellcheck="false">
-                  <span class="placeholder">
-                     Email
-                  </span>
+               <div style="width: 100%; margin-top:  30px; text-align:center; height: max-content; font-size: 1.25rem;">
+                  Don't have an account? Signup
                </div>
-               <div class="input-block">
-                  <input type="password" class="password" placeholder="" style="position: relative; bottom: 13px;"
-                     name="input-text" id="input-text" required spellcheck="false">
-                  <span class="placeholder" style="position: absolute; top: -10px;">
-                     Password
-                  </span>
-               </div> <!--this-->
-               <div class="viewpass"><i id="passicon" class="fas fa-eye-slash"
-                     style="color: #161f29e8; font-size: 18px;"></i></div>
-               <input id="submit" disabled="disabled" type="submit" value="Sign in"> <!--  -->
-            </form>
-         </div>
-         <div class="otptions"></div>
-         <div class="gotosup"></div>
-      </section>
-   </main>
-   <script>
-      let windowHeight = $(window).innerHeight();
-      var iable = windowHeight / 10;
-      var iety = iable / 5;
-
-      $(".email").focus(function () {
-         $(".email").attr("placeholder", "earth@milkyway.com")
-      })
-
-      $(".email").focusout(function () {
-         $(".email").attr("placeholder", "")
-      })
-
-      $(".password").focus(function () {
-         $(".password").attr("placeholder", "● ● ● ● ● ● ●")
-      })
-
-      $(".password").focusout(function () {
-         $(".password").attr("placeholder", "")
-      })
-
-      $(document).ready(function () {
-         var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-         empty = true;
-
-         $('input').keyup(function () {
-            var empty = false;
-            $('input').each(function () {
-               if ($(this).val().length == 0 || $(this).val() == " " || !document.querySelector(".email").value.match(validRegex)) {
-                  empty = true;
+            </div>
+         </section>
+      </main>
+      <script>
+         let windowHeight = $(window).innerHeight();
+         var iable = windowHeight / 10;
+         var iety = iable / 5;
+   
+         $(".email").focus(function () {
+            $(".email").attr("placeholder", "earth@milkyway.com")
+         })
+   
+         $(".email").focusout(function () {
+            $(".email").attr("placeholder", "")
+         })
+   
+         $(".password").focus(function () {
+            $(".password").attr("placeholder", "● ● ● ● ● ● ●")
+         })
+   
+         $(".password").focusout(function () {
+            $(".password").attr("placeholder", "")
+         })
+   
+         $(document).ready(function () {
+            var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+            empty = true;
+   
+            $('input').keyup(function () {
+               var empty = false;
+               $('input').each(function () {
+                  if ($(this).val().length == 0 || $(this).val() == " " || !document.querySelector(".email").value.match(validRegex)) {
+                     empty = true;
+                  }
+               });
+   
+               if (empty) {
+                  $('input[type="submit"]').attr('disabled', 'disabled');
+                  $("#submit").css("opacity", "0.5")
+               } else {
+                  $('input[type="submit"]').removeAttr('disabled');
+                  $("#submit").css("opacity", "1")
                }
             });
-
-            if (empty) {
-               $('input[type="submit"]').attr('disabled', 'disabled');
+         });
+   
+   
+         $('.viewpass').click(function () {
+            if ($('#passicon').hasClass('fa-eye-slash')) {
+   
+               $('#passicon').removeClass('fa-eye-slash');
+   
+               $('#passicon').addClass('fa-eye');
+   
+               $('.password').attr('type', 'text');
+   
             } else {
-               $('input[type="submit"]').removeAttr('disabled');
+   
+               $('#passicon').removeClass('fa-eye');
+   
+               $('#passicon').addClass('fa-eye-slash');
+   
+               $('.password').attr('type', 'password');
             }
          });
-      });
-
-
-      $('.viewpass').click(function () {
-         if ($('#passicon').hasClass('fa-eye-slash')) {
-
-            $('#passicon').removeClass('fa-eye-slash');
-
-            $('#passicon').addClass('fa-eye');
-
-            $('.password').attr('type', 'text');
-
-         } else {
-
-            $('#passicon').removeClass('fa-eye');
-
-            $('#passicon').addClass('fa-eye-slash');
-
-            $('.password').attr('type', 'password');
-         }
-      });
-   </script>
-</body>
-
-</html>
+      </script>
+   </body>
+   
+   </html>
