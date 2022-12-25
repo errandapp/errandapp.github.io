@@ -26,7 +26,7 @@ div.input-block input {
   padding: 15px 15px;
   padding-right: 45px;
   border-radius: 1rem;
-  border: 2px solid  #161f29ab;
+  border: 2px solid  #dee3de;
   outline:none;
 }
 
@@ -60,7 +60,7 @@ background: #fff;
 
 div.input-block input:focus{
 color: #1F1E20;
-border-color: #276D8F;
+border-color: #3496c7;
 }
 
 div.input-block input:focus + span.placeholder {
