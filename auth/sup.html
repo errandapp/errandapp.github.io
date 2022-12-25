@@ -48,12 +48,12 @@
         div.input-block input {
             font-size: 1.5rem;
             color: #1F1E20;
-            height: 30px;
+            height: 57px;
             width: 100%;
             /* margin-bottom:  30px; */
             box-sizing: border-box;
-            border:   none;
-            padding: 20px 40px;
+            border:    none;
+            padding: 0 30px;
             border-bottom:  2px solid #dee3de;
             outline: none;
         }
@@ -71,8 +71,8 @@
 
             font-size: 1.5rem;
 
-            top: -5px;
-            left:  34px;
+            top: 4px;
+            left:  24px;
             transition: all 0.2s;
             transform-origin: 0% 0%;
             background: none;
@@ -81,7 +81,7 @@
 
         div.input-block input:valid+span.placeholder,
         div.input-block input:focus+span.placeholder {
-            transform: scale(0.9) translateY(-30px) translateX(-40px);
+            transform: scale(0.9) translateY(-40px) translateX(-30px);
             background: rgba(255, 255, 255, 0);
         }
 
@@ -143,16 +143,15 @@
             height: max-content;
             padding: 5px;
             position: relative;
-            top: 30px;
+            top: 45px;
             display: flex;
             align-items: center;
             justify-content: center;
         }
 
         .tag {
-            width: 60%;
-            height: 100px;
-            /* border: 1px solid red; */
+            width: 50%;
+            height: 70px;
             text-align: center;
         }
 
@@ -175,15 +174,13 @@
             display: flex;
             color:  #dee3de;
             
-            bottom:  29px;
+            bottom:  36px;
         }
 
         .terms{
             width:  100%;
-            height: 60px;
+            height: max-content;
             padding:  5px;
-            line-height: 300%;
-            margin-top:  20px;
             position: relative;
             bottom:  -5px;
         }
@@ -201,11 +198,9 @@
             padding: 5px ;
         }
 
-    
-
         #submit{
             width: 100%;
-            height:  45px;
+            height: 57px;
             font-size: 1.5rem;
             border:  none;
             border-radius: 7px;
@@ -225,7 +220,7 @@
         </section>
         <section id="bsect">
             <section class="welcomess">
-                <div class="tag">We're thrilled to have you here!<br><span >Let's start with some basic info</span>
+                <div class="tag">We're thrilled to have you here
                 </div>
             </section>
             <section id="signform">
@@ -258,7 +253,8 @@
                         <div class="fasi"><i  id="b" class="fa-solid fa-envelope" style="font-size:  1.5rem;"></i></div>
                      </div>
                      <div class="terms">
-                       <label for="checkbox" > <input type="checkbox" style="margin-right:  6px;  position: relative; top: 1px;"  name="" id="checkbox"> By tapping next, you agree to our <strong style="font-size: inherit;">Terms and condition</strong>
+                        <input type="checkbox" style="margin-right:  6px;  position: relative; top: 2px;"  name="" id="checkbox"> <label for="checkbox" style="font-size:14px;">
+                            By tapping next, you agree to our <strong style="font-size:14px;">Terms and condition</strong>
                         </label>
                      </div>
                      <div class="subfoot">
@@ -274,10 +270,6 @@
             multiLine: true
         });
 
-        textFit(document.querySelector(".terms"), {
-            maxFontSize: 25,
-        });
-        
     </script>
 </body>
 
