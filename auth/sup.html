@@ -30,7 +30,7 @@
 
 
         * {
-            font-family: 'Hanken Grotesk', sans-serif;
+            font-family: 'Hanken Grotesk', Tahoma, sans-serif;
         }
 
         * {
@@ -143,15 +143,14 @@
             height: max-content;
             padding: 5px;
             position: relative;
-            top: 45px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            top: 20px;
+            padding-bottom:  10px;
+            text-align: center;
         }
 
         .tag {
-            width: 50%;
-            height: 70px;
+            width: 75%;
+            height: 50px;
             text-align: center;
         }
 
@@ -162,7 +161,7 @@
             margin-left: 10%;
             background-color: transparent;
             position: relative;
-            top: 55px;
+            top: 25px;
             /* border: 1px solid black; */
         }
 
@@ -177,35 +176,40 @@
             bottom:  36px;
         }
 
-        .terms{
-            width:  100%;
-            height: max-content;
-            padding:  5px;
-            position: relative;
-            bottom:  -5px;
-        }
-
-
-        #checkbox{
-            background-color: #1F1E20;
-            accent-color:  #276D8F;
-        }
-
-        .subfoot{
-            width:  100%;
-            height:  auto;
-            /* border:  1px solid black; */
-            padding: 5px ;
-        }
 
         #submit{
             width: 100%;
-            height: 57px;
-            font-size: 1.5rem;
+            height: 50px;
+            font-size: 1.6rem;
             border:  none;
-            border-radius: 7px;
+            border-radius: 10px;
             background-color: #276D8F;
             color:  white;
+        }
+
+        .welcomes {
+            width: 100%;
+            height: max-content;
+            margin-top: 15px;
+            font-size: 2rem;
+        }
+
+        .ta {
+            width: 100%;
+            text-align: center;
+        }
+
+        .ho{
+            height: max-content;
+            width: 100%;
+        }
+
+        .green{
+            width:  100%;
+            height: max-content;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
     </style>
 </head>
@@ -219,10 +223,16 @@
         <section id="tsect">
         </section>
         <section id="bsect">
-            <section class="welcomess">
-                <div class="tag">We're thrilled to have you here
-                </div>
-            </section>
+            <div class="ho">
+                <section class="welcomess">
+                    <div class="green"><div class="tag">We're thrilled to have you here!
+                    </div> </div><section class="welcomes">
+                    <div class="ta">Let's begin with some basic info
+                    </div>
+                </section>
+                </section>
+               
+            </div>
             <section id="signform">
                 <form action="app" method="post" id="validate">
                    <div class="input-block">
@@ -243,6 +253,7 @@
                        </span>
                        <div class="fasi"><i id="a" class="fa-solid fa-user" style="font-size:  1.5rem;"></i></div>
                     </div>
+
                     <div class="input-block">
                         <input type="text" autocomplete="off"
                         spellcheck="false" class="password" placeholder=""
@@ -252,13 +263,10 @@
                         </span>
                         <div class="fasi"><i  id="b" class="fa-solid fa-envelope" style="font-size:  1.5rem;"></i></div>
                      </div>
-                     <div class="terms">
-                        <input type="checkbox" style="margin-right:  6px;  position: relative; top: 2px;"  name="" id="checkbox"> <label for="checkbox" style="font-size:14px;">
-                            By tapping next, you agree to our <strong style="font-size:14px;">Terms and condition</strong>
-                        </label>
-                     </div>
+                   
                      <div class="subfoot">
                             <input type="submit" id="submit" value="Next">
+                            <div style="margin-top: 13px; color: #276D8F;  height:  25px; font-size: 1.3rem; text-align: center;">Continue sign up as a dispatch customer</div>
                      </div>
                  </form>
             </section>
