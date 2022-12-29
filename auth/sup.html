@@ -55,7 +55,7 @@
             box-sizing: border-box;
             border: none;
             padding: 0 30px;
-            border-bottom: 2px solid #1f1e203d;
+            border-bottom: 1px solid #dddddd;
             outline: none;
         }
 
@@ -88,7 +88,7 @@
 
         div.input-block input:focus {
             color: #1F1E20;
-            border-color: #276D8F;
+            border-bottom: 2px solid #276D8F;
 
         }
 
@@ -140,7 +140,7 @@
 
         .tag {
             width: 55%;
-            height: 50px;
+            height: 55px;
             text-align: center;
         }
 
@@ -186,6 +186,10 @@
             margin-left:  10%;
             top: 80%;
         }
+
+        #submit{
+         opacity:  0.5;
+      }
     </style>
 </head>
 
@@ -216,12 +220,12 @@
                             Last name
                         </span>
                     </div>
-                    <div style="color: #276D8F;  height:  25px; font-size: 1.5rem; text-align: left; margin-top:  10px;">Sign up as a
+                    <div style="color: #276D8F;  height:  25px; font-size: 1.5rem; text-align: left; margin-top:  10px;">Carry on sign up as a
                         dispatch customer</div>
                 </form>
             </section>             <div class="green-giant">
                         
-                        <input type="submit" id="submit" value="Next">
+                        <input type="submit" id="submit" disabled="disabled" value="Next">
                     </div>
         </section>
     </main>
@@ -251,6 +255,29 @@
          $('#passicon').css("color", "#6c757d");
       })
 
+
+
+     $(document).ready(function () {
+         var validRegex = /^[0-9a-zA-Z]+$/;
+         empty = true;
+
+         $('input').keyup(function () {
+            var empty = false;
+            $('input').each(function () {
+               if ($(this).val().length == 0 || $(this).val() == " " || !document.querySelector(".email").value.match(validRegex)) {
+                  empty = true;
+               }
+            });
+
+            if (empty) {
+               $('input[type="submit"]').attr('disabled', 'disabled');
+               $("#submit").css("opacity", "0.5")
+            } else {
+               $('input[type="submit"]').removeAttr('disabled');
+               $("#submit").css("opacity", "1")
+            }
+         });
+      });
     </script>
 </body>
 
