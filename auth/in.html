@@ -2,185 +2,205 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="minimal-ui, width=device-width, maximum-scale=1, user-scalable=no">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="theme-color" content="#ffffff" />
-    <title>Swift app</title>
-    <script src="scpt/jquery-3.6.1.min.js"></script>
-    <script src="scpt/jQuery-Plugin-For-Fitting-Text-To-Its-Container-textFit/textFit.min.js"></script>
-    <script src="https://kit.fontawesome.com/335f0c7037.js" crossorigin="anonymous"></script>
-    <style>
-        html,
-        body {
-            margin: 0px;
-            padding: 0px;
-            background-color: #ffffff;
-            height: 100%;
-            user-select: none;
-            overflow: hidden;
-        }
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, user-scalable=no">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <meta name="theme-color" content="#ECEBEC" />
+   <title>Swift app</title>
+   <script src="https://swiftcourier.github.io/app.github.io/auth/scpt/jquery-3.6.1.min.js"></script>
+   <script
+      src="https://swiftcourier.github.io/app.github.io/auth/scpt/jQuery-Plugin-For-Fitting-Text-To-Its-Container-textFit/textFit.min.js"></script>
+   <script src="https://kit.fontawesome.com/335f0c7037.js" crossorigin="anonymous"></script>
+   <style>
+      html,
+      body {
+         margin: 0px;
+         padding: 0px;
+         background-color: #ffffff;
+         height: 100%;
+         user-select: none;
+         overflow: hidden;
+      }
 
-        * {
-            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-        }
 
-        @font-face {
-            font-family: PublicaSans-Black;
-            src: url(font/PublicaSans-Light.otf);
-        }
+      @font-face {
+         font-family: PublicaSans-Black;
+         src: url(font/PublicaSans-Light.otf);
+      }
 
-        @font-face {
-            font-family: 'Myriad Pro';
-            src: url(https://swiftcourier.github.io/app.github.io/auth/font/Myriad%20Pro%20Regular.ttf);
-        }
+      @font-face {
+         font-family: 'Myriad Pro';
+         src: url(https://swiftcourier.github.io/app.github.io/auth/font/Myriad%20Pro%20Regular.ttf);
+      }
 
-        :root {
-            --illustrationCanvas: 0px;
-            --resultantHeight: 0px;
-        }
+      :root {
+         --illustrationCanvas: 0px;
+         --resultantHeight: 0px;
+      }
 
-        #return {
+      #return {
+         display: none;
+         font-size: small;
+      }
+
+      @media (min-width: 769px) {
+         #bkground {
             display: none;
-            font-size: small;
-        }
+         }
 
-        @media (min-width: 769px) {
-            #bkground {
-                display: none;
-            }
-
-            #fsection {
-                display: none;
-            }
-
-            #return {
-                display: inline;
-                padding: 5px;
-            }
-        }
-
-        #bkground {
-            height: 100%;
-            width: 100%;
-        }
-
-        ::-webkit-scrollbar {
+         #fsection {
             display: none;
-        }
+         }
 
-        .appname {
-            width: 100%;
-            height: 15%;
-            /* border: 1px solid black; */
-            text-align: center;
-            letter-spacing: 1px;
-            display: flex;
-            color: #8a8a8a;
-            justify-content: center;
-            align-items: flex-end;
-            font-size: 13px;
-        }
-
-        .illusine {
-            width: 100%;
-            height: 70%;
-            /* border: 1px solid black; */
-        }
-
-        .continue {
-            width: 100px;
-            height: 35px;
-            border-radius: 10px;
-            background-color:  #276D8F;
-            color: white;
-            font-size: 12px;
-        }
+         #return {
+            display: inline;
+            padding: 5px;
+         }
+      }
 
 
-        .justdoit {
-            display: flex;
-            align-items: flex-start;
-            justify-content: center;
-            height: 15%;
-            width: 100%;
-        }
 
-        .continue {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
+      ::-webkit-scrollbar {
+         display: none;
+      }
 
-        .illlustration {
-            width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 60%;
-            /* border:  1px solid black; */
-        }
 
-        .tilllustration {
-            width: 100%;
-            height: 40%;
-            /* border: 1px solid black; */
-        }
+      svg {
+         box-sizing: border-box;
+         height: 80%;
+         width: 100%;
+      }
 
-        img {
-            filter: grayscale();
-        }
+      #bkground {
+         height: 100%;
+         width: 100%;
+      }
 
-        .tname {
-            width: 70%;
-            text-align: center;
-            margin-left: 15%;
-            margin-top:  5%;
-            height: 50%;
-            /* border: 1px solid black; */
-        }
+      path {
+         width: 100%;
+      }
 
-        .ttag {
-            width: 60%;
-            text-align: center;
-            margin-left: 20%;
-            height: 30%;
-            /* border: 1px solid black; */
-        }
-    </style>
+      #fsection {
+         width: 100%;
+         height: 100%;
+         position: absolute;
+         top: 0%;
+      }
+
+      #aesthillust {
+         width: 100%;
+         height: var(--illustrationCanvas);
+         background-image: url(imgs/vector-illustration.png);
+         background-position: center;
+         background-size: 110%;
+         background-repeat: no-repeat;
+         filter: grayscale(10%);
+      }
+
+      #description {
+         height: var(--resultantHeight);
+         width: 100%;
+         box-sizing: border-box;
+      }
+
+
+      .give {
+         width: 100%;
+         height: 55%;
+      }
+
+      .meaname {
+         width: 80%;
+         height: 25%;
+      }
+
+   a:active{
+      background: red;
+   }
+   </style>
 </head>
 
 <body>
-    <span id="return">
-        <span style="font-size: 150%; font-weight:bold;">Swift Courier</span>
-        <br>&nbsp; I'm an app, use mobile view instead.</span>
-    <main id="bkground">
-        <div class="appname"><span class="htext">Swift</span></div>
-        <div class="illusine">
-            <div class="illlustration">
-                <img src="imgs/vector-illustration.png" width="200px" alt="" srcset="">
+   <span id="return">
+      <span style="font-size: 150%; font-weight:bold;">Swift Courier</span>
+      <br>&nbsp; I'm an app, use mobile view instead.</span>
+   <main id="bkground">
+   </main>
+   <section id='fsection'>
+      <section id="aesthillust">
+         <div></div>
+      </section>
+      <section id="description">
+         <div class="give">
+            <div class="idlebrain"
+               style="width: 75%; height: 50%; margin-left: 10%;  margin-top: 5%; font-family:  Tahoma, Geneva, Verdana, sans-serif;  ">
+               You order, another deliver.
+               <!-- Syn. to you order, an order deliver -->
             </div>
-            <div class="tilllustration">
-                <div class="tname">You order, another deliver</div>
-                <div class="ttag">  Retrieve anything, anywhere, right to your doorstep.</div>
-            </div>
-        </div>
-        <div class="justdoit">
-            <div class="continue"> Continue</div>
-        </div>
-    </main>
-    <script>
-        textFit(document.querySelector(".tname"), {
-            minFontSize: 2,
-            multiLine: true,
-        });
+            <div class="brainidle"
+               style="width: 70%; height: 27%; margin-left: 10%; color: #2b2b2b;  font-family: 'Myriad Pro', Tahoma, Geneva, Verdana, sans-serif; ">
+               Retrieve anything, anywhere, right to your doorstep.</div>
+         </div>
+         <div class="meaname">   <!-- pointer-->
+            <a href="sin.html"  
+               style="background-color: #276D8F !important;   color: #ffffff; width: 70%; margin-left: 12%; height: 80%;  border-radius: 10px;  display: flex; align-items: center;  justify-content: space-between;">
+               <div style="margin-left: 10%;">
+                  <i class="fa-solid fa-right-from-bracket fa-lg" style="
+                  font-size: 18px;"></i>
+               </div>
+               <div
+                  style=" font-size: 18px; margin-right: 10%; font-family: Tahoma, Geneva, Verdana, sans-serif; height: 100%; float: right; display: flex; align-items: center; font-weight: 400;">Get started</div>
+            </a>
+         </div>
+      </section>
+   </section>
 
-        textFit(document.querySelector(".ttag"), {
-            maxFontSize: 14,
-            minFontSize: 2,
-            multiLine: true,
-        });
-    </script>
+   <script>
+      let windowHeight = $(window).innerHeight();
+      let windowWidth = $(window).innerWidth();
+      let ctrlWidth = 159 - windowWidth;
+
+      let windowHeightCenter = windowHeight / 1.4;
+      let illustraCanvas = windowHeightCenter - 55;
+      let resultantHeight = windowHeight - illustraCanvas;
+
+      // alert(resultantHeight); make it match with width and height
+
+      var rt = document.querySelector(':root');
+      function rtv_retrieve() {
+         var rs = getComputedStyle(rt);
+         // alert(rs.getPropertyValue('--resultantHeight') + resultantHeight);
+      }
+
+      function rtv_dispatch() {
+         rt.style.setProperty('--illustrationCanvas', illustraCanvas + 'px');
+         rt.style.setProperty('--resultantHeight', resultantHeight + 'px');
+      }
+
+      rtv_dispatch();
+
+      $('#bkground').append('<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" style="enable-background:new 0 0 50 50;" xml:space="preserve"><path style=" fill: #ECEBEC;  stroke-width: 2px; stroke: #ECEBEC;" stroke-linejoin="round" stroke-linecap="round" d="M 0 0 \
+      h '+ windowWidth + ' \
+      c 0 114.7 0 229.4 0 '+ windowHeightCenter + ' \
+      c 0 6 0 12.1 0 18.1 \
+      c 0 1 -1.5 1.2 -1.8 0.2 \
+      c -1.6 -5.4 -3 -10.8 -4.7 -16.2 \
+      c -11.9 -37.8 -38.1 -57.1 -77.3 -57.1 \
+      c -61.6 0 -123.3 0.1 '+ ctrlWidth + ' 0 \
+      c -44.9 -0.1 -75.2 -30.2 -75.3 -75.2 \
+      V 0 \
+      z"></svg>');
+
+      textFit(document.querySelector(".idlebrain"), {
+         minFontSize: 2,
+         multiLine: true,
+      });
+
+      textFit(document.querySelector(".brainidle"), {
+         minFontSize: 2,
+         multiLine: true,
+      })
+   </script>
 </body>
 
 </html>
