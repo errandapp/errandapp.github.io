@@ -26,7 +26,8 @@
             font-weight: normal;
             color: #6c757d;
         }
-        @import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk&display=swap'); 
+
+        @import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk&display=swap');
 
 
         * {
@@ -40,7 +41,7 @@
             font-size: 62.5%;
         }
 
-      
+
         div.input-block {
             position: relative;
         }
@@ -52,9 +53,9 @@
             width: 100%;
             /* margin-bottom:  30px; */
             box-sizing: border-box;
-            border:    none;
+            border: none;
             padding: 0 30px;
-            border-bottom:  2px solid #1f1e203d;
+            border-bottom: 2px solid #1f1e203d;
             outline: none;
         }
 
@@ -72,7 +73,7 @@
             font-size: 1.6rem;
 
             top: 4px;
-            left:  24px;
+            left: 24px;
             transition: all 0.2s;
             transform-origin: 0% 0%;
             background: none;
@@ -88,7 +89,7 @@
         div.input-block input:focus {
             color: #1F1E20;
             border-color: #276D8F;
-            
+
         }
 
         div.input-block input:focus+span.placeholder {
@@ -121,37 +122,25 @@
             background: #ECEBEC;
         }
 
-        #tsect {
-            width: 100%;
-            height: 15%;
-            background: #ECEBEC;
-            display: flex;
-            align-items: center;
-            background-color: transparent;
-            justify-content: center;
-        }
 
         #bsect {
             width: 100%;
-            height: 85%;
-            border-top-left-radius: 60px;
+            height: 100%;
             background-color: #ffffff;
         }
 
         .welcomess {
             width: 100%;
             height: max-content;
-            position: relative;
-            top: 20px;
             display: flex;
-            margin-bottom: 10px;
+            margin-top: 15%;
             align-items: center;
             justify-content: center;
         }
 
         .tag {
-            width: 65%;
-            height: 60px;
+            width: 55%;
+            height: 50px;
             text-align: center;
         }
 
@@ -166,43 +155,36 @@
             /* border: 1px solid black; */
         }
 
-        .fasi{
-            width: 40px;
-            height:  30px;
-            /* border: 1px solid black; */
-            position: relative;
-            display: flex;
-            color:  #dee3de;
-            
-            bottom:  36px;
-        }
 
 
-        #submit{
+        #submit {
             width: 100%;
             height: 50px;
             font-size: 1.6rem;
-            border:  none;
+            border: none;
             border-radius: 10px;
             background-color: #276D8F;
-            color:  white;
+            color: white;
         }
 
-        .ho{
+        .ho {
             height: max-content;
             width: 100%;
         }
 
-        .green{
-            width:  100%;
+        .green {
+            width: 100%;
             height: max-content;
             display: flex;
             align-items: center;
             justify-content: center;
         }
 
-        .subfoot{
-            margin-top:  55px;       
+        .green-giant{
+            position: absolute;
+            width:  80%;
+            margin-left:  10%;
+            top: 80%;
         }
     </style>
 </head>
@@ -213,49 +195,34 @@
         <br>&nbsp; I'm an app, use mobile view instead.
     </span>
     <main id="bkground">
-        <section id="tsect">
-        </section>
         <section id="bsect">
             <section class="welcomess">
-                <div class="tag">Let's begin with some basic info
+                <div class="tag">Let's start with some basic info
                 </div>
-                </section>
+            </section>
             <section id="signform">
                 <form action="app" method="post" id="validate">
-                   <div class="input-block">
-                       <input type="text" class="email" autocomplete="off" autofocus
-                          spellcheck="false" name="input-text" class="inp" placeholder="" id="input-text" required
-                          spellcheck="false">
-                       <span class="placeholder">
-                          First name
-                       </span>
-                       <div class="fasi"><i class="fa-solid fa-user" style="font-size:  18px; color: #6c757d;"></i></div>
-                    </div>
-                    <div class="input-block">
-                       <input type="text" autocomplete="off"
-                       spellcheck="false" class="password" placeholder=""
-                          name="input-text" id="input-text" required spellcheck="false">
-                       <span class="placeholder">
-                          Last name
-                       </span>
-                       <div class="fasi"><i id="a" class="fa-solid fa-user" style="font-size:  18px; color: #6c757d;"></i></div>
-                    </div>
-
-                    <div class="input-block">
-                        <input type="text" autocomplete="off"
-                        spellcheck="false" class="password" placeholder=""
-                           name="input-text" id="input-text" required spellcheck="false">
+                    <div class="input-block" style="margin-bottom: 30px">
+                        <input type="text" class="email" autocomplete="off" autofocus spellcheck="false"
+                            name="input-text" class="inp" placeholder="" id="input-text" required spellcheck="false">
                         <span class="placeholder">
-                           Email address
+                            First name
                         </span>
-                        <div class="fasi"><i  id="b" class="fa-solid fa-envelope"style="font-size:  18px; color: #6c757d;"></i></div>
-                     </div>
-                     <div style="color: #276D8F;  height:  25px; font-size: 1.5rem; text-align: left; position: relative; top: -20px">Sign up as a dispatch customer</div>
-                     <div class="subfoot">
-                            <input type="submit" id="submit" value="Next">
-                     </div>
-                 </form>
-            </section>
+                    </div>
+                    <div class="input-block">
+                        <input type="text" autocomplete="off" spellcheck="false" class="password" placeholder=""
+                            name="input-text" id="input-text" required spellcheck="false">
+                        <span class="placeholder">
+                            Last name
+                        </span>
+                    </div>
+                    <div style="color: #276D8F;  height:  25px; font-size: 1.5rem; text-align: left; margin-top:  10px;">Sign up as a
+                        dispatch customer</div>
+                </form>
+            </section>             <div class="green-giant">
+                        
+                        <input type="submit" id="submit" value="Next">
+                    </div>
         </section>
     </main>
     <script>
@@ -263,6 +230,26 @@
             minFontSize: 2,
             multiLine: true
         });
+
+        $(".email").focus(function () {
+         $(".email").attr("placeholder", "Eleanor");
+         $('#viewmail').css("color", "#276D8F");
+      })
+
+      $(".email").focusout(function () {
+         $(".email").attr("placeholder", "");
+         $('#viewmail').css("color", "#6c757d");
+      })
+
+      $(".password").focus(function () {
+         $(".password").attr("placeholder", "Barlowe")
+         $('#passicon').css("color", "#276D8F");
+      })
+
+      $(".password").focusout(function () {
+         $(".password").attr("placeholder", "")
+         $('#passicon').css("color", "#6c757d");
+      })
 
     </script>
 </body>
