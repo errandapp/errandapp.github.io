@@ -10,7 +10,12 @@
     <script src="scpt/jquery-3.6.1.min.js"></script>
     <script src="https://kit.fontawesome.com/335f0c7037.js" crossorigin="anonymous"></script>
     <script src="scpt/jQuery-Plugin-For-Fitting-Text-To-Its-Container-textFit/textFit.min.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk&display=swap" rel="stylesheet">
     <style>
         html,
         body {
@@ -31,7 +36,7 @@
 
 
         * {
-            font-family: 'Hanken Grotesk', Tahoma, sans-serif;
+            font-family: 'Lato', Tahoma, sans-serif;
         }
 
         * {
@@ -41,6 +46,7 @@
             font-size: 62.5%;
         }
 
+        @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 
         div.input-block {
             position: relative;
@@ -119,7 +125,6 @@
         #bkground {
             width: 100%;
             height: 100%;
-            background: #ECEBEC;
         }
 
 
@@ -159,7 +164,7 @@
 
         #submit {
             width: 100%;
-            height: 50px;
+            height: 57px;
             font-size: 1.6rem;
             border: none;
             border-radius: 10px;
@@ -201,11 +206,11 @@
     <main id="bkground">
         <section id="bsect">
             <section class="welcomess">
-                <div class="tag">Let's start with some basic info
+                <div class="tag" style="font-family: 'Lato', Tahoma, sans-serif">Let's start with some basic info
                 </div>
             </section>
             <section id="signform">
-                <form action="app" method="post" id="validate">
+                <form method="post" id="validate">
                     <div class="input-block" style="margin-bottom: 30px">
                         <input type="text" class="email" autocomplete="off" autofocus spellcheck="false"
                             name="input-text" class="inp" placeholder="" id="input-text" required spellcheck="false">
@@ -220,12 +225,12 @@
                             Last name
                         </span>
                     </div>
-                    <div style="color: #276D8F;  height:  25px; font-size: 1.5rem; text-align: left; margin-top:  10px;">Carry on as a
+                    <div style="color: #276D8F;  height:  25px; font-size: 1.5rem; text-align: left; font-family: 'Lato', Tahoma, sans-serif; margin-top:  10px;">Carry on as a
                         dispatch customer</div>
                 </form>
             </section>             <div class="green-giant">
                         
-                        <input type="submit" id="submit" disabled="disabled" value="Next">
+                        <input type="submit" id="submit" disabled="disabled" style="font-family: 'Lato', Tahoma, sans-serif" value="Next">
                     </div>
         </section>
     </main>
@@ -275,6 +280,9 @@
             } else {
                $('input[type="submit"]').removeAttr('disabled');
                $("#submit").css("opacity", "1")
+                    $("#submit").click(function () {  
+                        window.open("sup-2.html", "_self")
+                    })
             }
          });
       });
