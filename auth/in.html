@@ -7,11 +7,11 @@
    <meta http-equiv="X-UA-Compatible" content="ie=edge">
    <meta name="theme-color" content="#ECEBEC" />
    <title>Swift app</title>
-   <script src="https://swiftcourier.github.io/app.github.io/auth/scpt/jquery-3.6.1.min.js"></script>
-   <script
-      src="https://swiftcourier.github.io/app.github.io/auth/scpt/jQuery-Plugin-For-Fitting-Text-To-Its-Container-textFit/textFit.min.js"></script>
+   <script src="scpt/jquery-3.6.1.min.js"></script>
+   <script src="scpt/jQuery-Plugin-For-Fitting-Text-To-Its-Container-textFit/textFit.min.js"></script>
    <script src="https://kit.fontawesome.com/335f0c7037.js" crossorigin="anonymous"></script>
    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk&display=swap" rel="stylesheet">
+   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
    <style>
       html,
       body {
@@ -23,16 +23,20 @@
          overflow: hidden;
       }
 
-
+      @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+      
       @font-face {
          font-family: PublicaSans-Black;
          src: url(font/PublicaSans-Light.otf);
       }
 
       @font-face {
-         font-family: 'Myriad Pro';
-         src: url(https://swiftcourier.github.io/app.github.io/auth/font/Myriad%20Pro%20Regular.ttf);
+         font-family: 'Nexa';
+         src:  url(font/Nexa-Trial-Regular.ttf);
       }
+      
+      @import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk&display=swap');
+
 
       :root {
          --illustrationCanvas: 0px;
@@ -118,12 +122,9 @@
       background: red;
    }
 
-   @import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk&display=swap');
+ 
 
 
-* {
-    font-family: 'Hanken Grotesk', Tahoma, sans-serif;
-}
 
    </style>
 </head>
@@ -141,19 +142,21 @@
       <section id="description">
          <div class="give">
             <div class="idlebrain"
-               style="width: 70%; height: 50%; margin-left: 15%;  margin-top: 5%; font-family:  Tahoma, Geneva, Verdana, sans-serif; text-align: center;   ">
+               style="width: 70%; height: 50%; margin-left: 15%;  margin-top: 5%;  text-align: center;   font-family: 'Hanken Grotesk', Tahoma, sans-serif;  ">
                You order, another deliver
                <!-- Syn. to you order, an order deliver -->
             </div>
             <div class="brainidle"
-               style="width: 60%; height: 27%; margin-left: 20%; color: #2b2b2b;  font-family: Tahoma, Geneva, Verdana, sans-serif; text-align: center; ">
+               style="width: 60%; height: 27%; margin-left: 20%; color: #2b2b2b;  font-family: 'Lato', Tahoma, sans-serif;
+               text-align: center; ">
                Retrieve anything, anywhere, right to your doorstep.</div>
          </div>
          <div class="meaname" style=" display:  flex; align-items: center; justify-content: center;">   <!-- pointer-->
             <a href="sin.html"  
                style="background-color: #276D8F !important;   color: #ffffff; width: 40%;  height: 80%;  border-radius: 9px;  display: flex; align-items: center;  justify-content:center;text-decoration: none; ">
                <div
-                  style=" font-size: 18px; font-family: Tahoma, Geneva, Verdana, sans-serif; height: 100%; display: flex;  align-items: center; justify-content: center;  font-weight: 400;">Get started</div>
+                  style=" font-size: 18px;  font-family: 'Lato', Tahoma, sans-serif;
+                  text-align: center; height: 100%; display: flex;  align-items: center; justify-content: center;  ">Get started</div>
             </a>
          </div>
       </section>
@@ -205,7 +208,6 @@
          multiLine: true,
       })
    </script>
-   <div style="height: 500px; width:  100px;"></div>
 </body>
 
 </html>
