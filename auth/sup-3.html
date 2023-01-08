@@ -166,7 +166,7 @@
             outline: none;
             width: 50px;
             height: 50px;
-            margin: 15px;
+            margin: 5px;
             color:  #6c757d;
             border: none;
             text-align: center;
@@ -175,7 +175,7 @@
         }
         
 
-        img{
+        #ximg{
             width:  50%;
         }
     </style>
@@ -190,7 +190,7 @@
         <section id="bsect">
             <section class="welcomess">
                 <div class="tag">
-                    <img src="imgs/undraw_mail_sent_re_0ofv.svg" alt="">
+                    <img id="ximg" src="imgs/undraw_mail_sent_re_0ofv.svg" alt="">
                 </div>
             </section>
             <section class="main-cd">
@@ -205,18 +205,11 @@
                     <input type="text" oninput="this.value=this.value.replace(/[^0-9]/g, '');" class="likeaneagle" maxlength="1" name="" placeholder="0" id="numputt">
                     <input type="text" oninput="this.value=this.value.replace(/[^0-9]/g, '');" class="likeaneagle" maxlength="1" name="" placeholder="0" id="numputq">
                 </div>
-                <div style="width:  100%; display: flex; justify-content: space-between;">
-                    <div style="font-size: 1.6rem; color: #6c757d;  margin-left:  10%; ">Edit email</div>
-                    <div style="float: right; font-size: 1.6rem; color: #6c757d; margin-right:  10%; ">Resend
-                        code</div>
-                </div>
-            </section>
-            
-            <div class="green-giant">
-                <input type="submit" id="submit" disabled="disabled" style="font-family: 'Lato', Tahoma, sans-serif"
-                    value="Verify">
-            </div>
+                <div style="width:  100%; margin-top: 15px; font-size: 1.6rem; color: #6c757d;text-align: center;">Resend code</div>
+            </section>   <div style="font-size: 1.6rem;  width: 100%; display: flex; justify-content: center; margin-top: 30px; color: #6c757d;text-align: center ;">
+        <img src="imgs/Material Icons_e22b(0)_32.png" width="32px" alt="" srcset=""></div>
         </section>
+     
     </main>
     <script>
 
