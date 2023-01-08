@@ -18,31 +18,23 @@
       body {
          margin: 0px;
          padding: 0px;
-         background-color: #ffffff;
          height: 100%;
          user-select: none;
-         overflow: hidden;
-      }
-
-      @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
-      
-      @font-face {
-         font-family: PublicaSans-Black;
-         src: url(font/PublicaSans-Light.otf);
-      }
-
-      @font-face {
-         font-family: 'Nexa';
-         src:  url(font/Nexa-Trial-Regular.ttf);
       }
       
-      @import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk&display=swap');
-
-
-      :root {
-         --illustrationCanvas: 0px;
-         --resultantHeight: 0px;
+      
+      ::-webkit-input-placeholder {
+         font-size: 1.6rem;
+         font-family: Roboto, sans-serif;
+         font-weight: normal;
+         color: #6c757d;
       }
+
+      * {
+         font-family:  Tahoma, Geneva, Verdana, sans-serif
+      }
+
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 
       #return {
          display: none;
@@ -64,147 +56,278 @@
          }
       }
 
-
-
-      ::-webkit-scrollbar {
-         display: none;
-      }
-
-
-      svg {
-         box-sizing: border-box;
-         height: 80%;
-         width: 100%;
-      }
-
       #bkground {
-         height: 100%;
-         width: 100%;
-      }
-
-      path {
-         width: 100%;
-      }
-
-      #fsection {
          width: 100%;
          height: 100%;
-         position: absolute;
-         top: 0%;
+         background: #ECEBEC;
       }
 
-      #aesthillust {
-         width: 100%;
-         height: var(--illustrationCanvas);
-         background-image: url(imgs/undraw_takeout_boxes_ap54.svg);
-         background-position: center;
-         background-size:  90%;
-         background-repeat: no-repeat;
-      }
-
-      #description {
-         height: var(--resultantHeight);
-         width: 100%;
-         box-sizing: border-box;
-      }
-
-
-      .give {
-         width: 100%;
-         height: 55%;
-      }
-
-      .meaname {
+      #tsect {
          width: 100%;
          height: 25%;
+         background: #ECEBEC;
+         display: flex;
+         align-items: center;
+         justify-content: center;
       }
 
-   a:active{
-      background: red;
-   }
+      #bsect {
+         width: 100%;
+         height: 75%;
+         border-top-left-radius: 60px;
+         background-color: #ffffff;
+      }
 
- 
+      .headtag {
+         width: 100%;
+         background-color: transparent;
+         height: 6%;
+         text-align: center;
+      }
+
+      .margin {
+         width: 100%;
+         height: 4px;
+         background-color: transparent;
+      }
+
+      .loginfield {
+         width: 80%;
+         padding: 5px;
+         background-color: transparent;
+         margin-left: 10%;
+         margin-top: 4%;
+      }
+
+      img {
+         background-color: transparent;
+      }
+
+      #submit {
+         width: 100%;
+         height: 57px;
+         outline: none;
+         color: white;
+         font-size: 1.6rem;
+         background-color: #276D8F;
+         border: none;
+         border-radius: 10px;
+      }
+
+
+      #submit {
+         position: relative;
+         bottom: 45px;
+      }
+
+      .viewpass {
+         float: right;
+         height: 57px;
+         width: 40px;
+         display: flex;
+         background: transparent;
+         align-items: center;
+         justify-content: center;
+         position: relative;
+         bottom: 87px;
+      }
+
+      .viewpas {
+         float: right;
+         height: 57px;
+         width: 40px;
+         display: flex;
+         align-items: center;
+         background: transparent;
+         justify-content: center;
+         position: relative;
+         z-index: 1;
+         top: 12px;
+      }
+
+      .gotosup{
+         position: relative;
+         bottom:  55px;
+         width:  100%;
+         height: auto;
+         background-color:  transparent;
+         padding:  5px;
+      }
+
+      legend{
+         text-align: center;
+         font-size:  1.5rem;font-family: 'Lato', Tahoma, sans-serif;
+         padding:  5px;
+      }
+
+      fieldset{
+         border:  none;
+         width: 50%;
+         font-family: 'Lato', Tahoma, sans-serif;
+         margin-left:  25%;
+         margin-top: 20px;
+         border-top: 2px solid #dddddd;
+      }
+
+      #submit{
+         opacity:  0.5;
+      }
+
+      .loginwiths{
+         width:  100%;
+         padding: 5px;
+         height: auto;
+      }
+
+      .lgmethods{
+         width:  100%;
+         height:  30px;
+         display:   flex;
+         align-items: center;
+         justify-content: center;
+      }
+
+      .lg{
+         height: 30px;
+         width:  30px;
+         opacity:  0.5;
+         margin-left:  15px; margin-right:  15px;
+      }
+
+
+      .imges{
+         width:  30px;
+      }
+
+    @import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk&display=swap');
+
+
+* {
+    font-family: 'Hanken Grotesk', Tahoma, sans-serif;
+}
+
    </style>
 </head>
 
 <body>
    <span id="return">
       <span style="font-size: 150%; font-weight:bold;">Swift Courier</span>
-      <br>&nbsp; I'm an app, use mobile view instead.</span>
+      <br>&nbsp; I'm an app, use mobile view instead.
+   </span>
    <main id="bkground">
-   </main>
-   <section id='fsection'>
-      <section id="aesthillust">
-         <div></div>
+      <section id="tsect">
+         <img src="imgs/PngItem_5567529.png" width="70px" alt="" srcset="">
       </section>
-      <section id="description">
-         <div class="give">
-            <div class="idlebrain"
-               style="width: 70%; height: 50%; margin-left: 15%;  margin-top: 5%;  text-align: center;   font-family: 'Hanken Grotesk', Tahoma, sans-serif;  ">
-               You order, another deliver
-               <!-- Syn. to you order, an order deliver -->
+      <section id="bsect">
+         <div class="loginfield">
+            <div style="height: 50px;  position: relative; top: 3.5px; display: flex; align-items: center; justify-content: center; z-index: 2;  font-family: 'Lato', Tahoma, sans-serif;font-size: 2.5rem; text-align: center;">What’s crackin’</div>
+            <form action="app" method="post" id="validate">
+               <div class="viewpas"><i id="viewmail" class="fa-solid fa-envelope" style="background-color: transparent; color: #6c757d; font-size: 18px;"></i>
+               </div>
+               <div class="input-block">
+                  <input type="text" class="email" style="position: relative; bottom:  45px;" autocomplete="off"
+                     spellcheck="false" name="input-text" class="inp" placeholder="" id="input-text" required
+                     spellcheck="false">
+                  <span class="placeholder">
+                     Email
+                  </span>
+               </div>
+               <div class="input-block">
+                  <input type="password" autocomplete="off"
+                  spellcheck="false" class="password" placeholder="" style="position: relative; bottom: 12.5px;"
+                     name="input-text" id="input-text" required spellcheck="false">
+                  <span class="placeholde" style="position: absolute; top: -10px;">
+                     Password
+                  </span>
+               </div> <!--this-->
+               <div style="width: 100%; height: 1.7rem; ">
+                  <span style="font-size: 1.5rem; font-family: 'Lato', Tahoma, sans-serif; background-color: transparent; color: #276D8F; margin-right:  0%;">Recover password</span></div>
+               <div class="viewpass"><i id="passicon" class="fas fa-eye-slash"
+                     style="background-color: transparent;  color: #6c757d; font-size: 18px;"></i></div>
+               <input id="submit" style=" font-family: 'Lato', Tahoma, sans-serif;" disabled="disabled" type="submit" value="Sign in"> <!--  -->
+            </form>
+         </div>
+         <div class="gotosup">
+            <div style="width: 100%; height: max-content;"><fieldset>
+               <legend>Continue with</legend>
+            </fieldset></div>
+            <div class="loginwiths">
+               <div class="lgmethods">
+                  <div class="lg"><img src="imgs/icons8-google.svg" class="imges" alt="" srcset=""></div><div class="lg"><img src="imgs/icons8-apple-logo.svg" class="imges" style="opacity:0.7" alt="" srcset=""></div><div class="lg"><img src="imgs/icons8-facebook.svg" class="imges" alt="" srcset=""></div>
+               </div>
             </div>
-            <div class="brainidle"
-               style="width: 60%; height: 27%; margin-left: 20%; color: #2b2b2b;  font-family: Tahoma, sans-serif;
-               text-align: center; ">
-               Retrieve anything, anywhere, right to your doorstep.</div>
-         </div>
-         <div class="meaname" style=" display:  flex; align-items: center; justify-content: center;">   <!-- pointer-->
-            <a href="sin.html"  
-               style="background-color: #276D8F !important;   color: #ffffff; width: 40%;  height: 80%;  border-radius: 9px;  display: flex; align-items: center;  justify-content:center;text-decoration: none; ">
-               <div
-                  style=" font-size: 18px;  font-family: 'Lato', Tahoma, sans-serif;
-                  text-align: center; height: 100%; display: flex;  align-items: center; justify-content: center;  ">Get started</div>
-            </a>
+            <div style="width: 100%; margin-top:  30px;  margin-bottom: 10px;text-align:center; font-family: 'Lato', Tahoma, sans-serif; height: max-content; font-size: 1.5rem;">
+               Don't have an account? <a href= "sup.html" style="font-size: 1.4rem;color: #276D8F; background-color: transparent; text-decoration: none;"> Sign up </a>
+            </div>
          </div>
       </section>
-   </section>
-
+   </main>
    <script>
       let windowHeight = $(window).innerHeight();
-      let windowWidth = $(window).innerWidth();
-      let ctrlWidth = 159 - windowWidth;
+      var iable = windowHeight / 10;
+      var iety = iable / 5;
 
-      let windowHeightCenter = windowHeight / 1.4;
-      let illustraCanvas = windowHeightCenter - 55;
-      let resultantHeight = windowHeight - illustraCanvas;
+      $(".email").focus(function () {
+         $(".email").attr("placeholder", "earth@milkyway.com");
+         $('#viewmail').css("color", "#276D8F");
+      })
 
-      // alert(resultantHeight); make it match with width and height
+      $(".email").focusout(function () {
+         $(".email").attr("placeholder", "");
+         $('#viewmail').css("color", "#6c757d");
+      })
 
-      var rt = document.querySelector(':root');
-      function rtv_retrieve() {
-         var rs = getComputedStyle(rt);
-         // alert(rs.getPropertyValue('--resultantHeight') + resultantHeight);
-      }
+      $(".password").focus(function () {
+         $(".password").attr("placeholder", "● ● ● ● ● ● ●")
+         $('#passicon').css("color", "#276D8F");
+      })
 
-      function rtv_dispatch() {
-         rt.style.setProperty('--illustrationCanvas', illustraCanvas + 'px');
-         rt.style.setProperty('--resultantHeight', resultantHeight + 'px');
-      }
+      $(".password").focusout(function () {
+         $(".password").attr("placeholder", "")
+         $('#passicon').css("color", "#6c757d");
+      })
 
-      rtv_dispatch();
+      $(document).ready(function () {
+         var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+         empty = true;
 
-      $('#bkground').append('<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" style="enable-background:new 0 0 50 50;" xml:space="preserve"><path style=" fill: #ECEBEC;  stroke-width: 2px; stroke: #ECEBEC;" stroke-linejoin="round" stroke-linecap="round" d="M 0 0 \
-      h '+ windowWidth + ' \
-      c 0 114.7 0 229.4 0 '+ windowHeightCenter + ' \
-      c 0 6 0 12.1 0 18.1 \
-      c 0 1 -1.5 1.2 -1.8 0.2 \
-      c -1.6 -5.4 -3 -10.8 -4.7 -16.2 \
-      c -11.9 -37.8 -38.1 -57.1 -77.3 -57.1 \
-      c -61.6 0 -123.3 0.1 '+ ctrlWidth + ' 0 \
-      c -44.9 -0.1 -75.2 -30.2 -75.3 -75.2 \
-      V 0 \
-      z"></svg>');
+         $('input').keyup(function () {
+            var empty = false;
+            $('input').each(function () {
+               if ($(this).val().length == 0 || $(this).val() == " " || !document.querySelector(".email").value.match(validRegex)) {
+                  empty = true;
+               }
+            });
 
-      textFit(document.querySelector(".idlebrain"), {
-         minFontSize: 2,
-         multiLine: true,
+            if (empty) {
+               $('input[type="submit"]').attr('disabled', 'disabled');
+               $("#submit").css("opacity", "0.5")
+            } else {
+               $('input[type="submit"]').removeAttr('disabled');
+               $("#submit").css("opacity", "1")
+            }
+         });
       });
 
-      textFit(document.querySelector(".brainidle"), {
-         minFontSize: 2,
-         multiLine: true,
-      })
+
+      $('.viewpass').click(function () {
+         if ($('#passicon').hasClass('fa-eye-slash')) {
+
+            $('#passicon').removeClass('fa-eye-slash');
+
+            $('#passicon').addClass('fa-eye');
+
+            $('.password').attr('type', 'text');
+
+         } else {
+
+            $('#passicon').removeClass('fa-eye');
+
+            $('#passicon').addClass('fa-eye-slash');
+
+            $('.password').attr('type', 'password');
+         }
+      });
    </script>
 </body>
 
