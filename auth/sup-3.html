@@ -167,10 +167,16 @@
             width: 50px;
             height: 50px;
             margin: 15px;
+            color:  #6c757d;
             border: none;
             text-align: center;
             font-size: 2.5rem;
-            border-bottom: 1px solid #dddddd;
+            border-bottom: 2px solid #dddddd;
+        }
+        
+
+        img{
+            width:  50%;
         }
     </style>
 </head>
@@ -183,14 +189,14 @@
     <main id="bkground">
         <section id="bsect">
             <section class="welcomess">
-                <div class="tag" style="font-family: 'Lato', Tahoma, sans-serif">Verify your email
+                <div class="tag">
+                    <img src="imgs/undraw_mail_sent_re_0ofv.svg" alt="">
                 </div>
             </section>
             <section class="main-cd">
                 <div class="cd-cover">
                     <div class="cd-info">
-                        Type the 4 digit code <br> sent to <br> <span style="color: #6c757d; font-size:  inherit
-                        ;">titan.saturn@milkyway.com</span>
+                        Type the 4 digit code <br> sent to <br> titan.saturn@milkyway.com
                     </div>
                 </div>
                 <div class="code">
@@ -199,21 +205,21 @@
                     <input type="text" oninput="this.value=this.value.replace(/[^0-9]/g, '');" class="likeaneagle" maxlength="1" name="" placeholder="0" id="numputt">
                     <input type="text" oninput="this.value=this.value.replace(/[^0-9]/g, '');" class="likeaneagle" maxlength="1" name="" placeholder="0" id="numputq">
                 </div>
-                <div style="width:100%; padding: 5px;  text-align: center; font-size: 1.6rem; color: #6c757d;">Resend
-                    code</div>
+                <div style="width:  100%; display: flex; justify-content: space-between;">
+                    <div style="font-size: 1.6rem; color: #6c757d;  margin-left:  10%; ">Edit email</div>
+                    <div style="float: right; font-size: 1.6rem; color: #6c757d; margin-right:  10%; ">Resend
+                        code</div>
+                </div>
             </section>
+            
             <div class="green-giant">
-                <div style="font-size: 1.6rem;  position:relative; top: -15px; color:  #276D8F;">Change email address</div>
                 <input type="submit" id="submit" disabled="disabled" style="font-family: 'Lato', Tahoma, sans-serif"
                     value="Verify">
             </div>
         </section>
     </main>
     <script>
-        textFit(document.querySelector(".tag"), {
-            minFontSize: 2,
-            multiLine: true
-        });
+
 
         textFit(document.querySelector(".cd-info"), {
             minFontSize: 2,
@@ -225,7 +231,7 @@
         })
 
         $("input").focusout(function (){
-            $(".likeaneagle").css("border-bottom", "1px solid #dddddd")
+            $(".likeaneagle").css("border-bottom", "2px solid #dddddd")
         })
 
         $("#numputu").keyup(function () {
