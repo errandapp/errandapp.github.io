@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#ffffff" />
+    <title>erranda.</title>
+    <script src="scpt/jquery-3.6.1.min.js"></script>
+    <script src="https://kit.fontawesome.com/335f0c7037.js" crossorigin="anonymous"></script>
+    <script src="scpt/jQuery-Plugin-For-Fitting-Text-To-Its-Container-textFit/textFit.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk&display=swap" rel="stylesheet">
+    <style>
+        html,
+        body {
+            margin: 0px;
+            padding: 0px;
+            height: 100%;
+            user-select: none;
+        }
+
+        ::-webkit-input-placeholder {
+            font-size: 2.5rem;
+            font-family: 'Lato', Tahoma, sans-serif;
+            color: #6c757d;
+            text-align: center
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk&display=swap');
+
+
+        * {
+            font-family: 'Lato', Tahoma, sans-serif;
+        }
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-size: 62.5%;
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+        #return {
+            display: none;
+            font-size: small;
+        }
+
+        @media (min-width: 769px) {
+            #bkground {
+                display: none;
+            }
+
+            #fsection {
+                display: none;
+            }
+
+            #return {
+                display: inline;
+                padding: 5px;
+            }
+        }
+
+        #bkground {
+            width: 100%;
+            height: 100%;
+        }
+
+
+        #bsect {
+            width: 100%;
+            height: 100%;
+            background-color: #ffffff;
+        }
+
+        .welcomess {
+            width: 100%;
+            height: max-content;
+            display: flex;
+            margin-top: 15%;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .tag {
+            width: 55%;
+            height: 55px;
+            text-align: center;
+        }
+
+        #submit {
+            width: 100%;
+            height: 57px;
+            font-size: 1.6rem;
+            border: none;
+            border-radius: 10px;
+            background-color: #276D8F;
+            color: white;
+        }
+
+        .ho {
+            height: max-content;
+            width: 100%;
+        }
+
+        .green {
+            width: 100%;
+            height: max-content;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .green-giant {
+            position: absolute;
+            width: 80%;
+            margin-left: 10%;
+            top: 80%;
+        }
+
+        #submit {
+            opacity: 0.5;
+        }
+
+        .main-cd {
+            width: 100%;
+            height: max-content;
+            padding: 5px;
+            box-sizing: border-box;
+            margin-top: 20%;
+        }
+
+        .cd-info {
+            height: 75px;
+            width: 85%;
+            text-align: center;
+        }
+
+        .cd-cover {
+            width: 100%;
+            height: max-content;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .code {
+            width: 100%;
+            height: max-content;
+            padding: 5px;
+            margin-top: 5%;
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        input[type=text] {
+            outline: none;
+            width: 50px;
+            height: 50px;
+            margin: 15px;
+            border: none;
+            text-align: center;
+            font-size: 2.5rem;
+            border-bottom: 1px solid #dddddd;
+        }
+    </style>
+</head>
+
+<body>
+    <span id="return">
+        <span style="font-size: 150%; font-weight:bold;">Swift Courier</span>
+        <br>&nbsp; I'm an app, use mobile view instead.
+    </span>
+    <main id="bkground">
+        <section id="bsect">
+            <section class="welcomess">
+                <div class="tag" style="font-family: 'Lato', Tahoma, sans-serif">Verify your email
+                </div>
+            </section>
+            <section class="main-cd">
+                <div class="cd-cover">
+                    <div class="cd-info">
+                        Type the 4 digit code <br> sent to <br> <span style="color: #6c757d; font-size:  inherit
+                        ;">titan.saturn@milkyway.com</span>
+                    </div>
+                </div>
+                <div class="code">
+                    <input type="text" oninput="this.value=this.value.replace(/[^0-9]/g, '');" maxlength="1" class="likeaneagle" autofocus name="" placeholder="0" id="numputu">
+                    <input type="text" oninput="this.value=this.value.replace(/[^0-9]/g, '');" class="likeaneagle" maxlength="1" name="" placeholder="0" id="numputd">
+                    <input type="text" oninput="this.value=this.value.replace(/[^0-9]/g, '');" class="likeaneagle" maxlength="1" name="" placeholder="0" id="numputt">
+                    <input type="text" oninput="this.value=this.value.replace(/[^0-9]/g, '');" class="likeaneagle" maxlength="1" name="" placeholder="0" id="numputq">
+                </div>
+                <div style="width:100%; padding: 5px;  text-align: center; font-size: 1.6rem; color: #6c757d;">Resend
+                    code</div>
+            </section>
+            <div class="green-giant">
+                <div style="font-size: 1.6rem;  position:relative; top: -15px; color:  #276D8F;">Change email address</div>
+                <input type="submit" id="submit" disabled="disabled" style="font-family: 'Lato', Tahoma, sans-serif"
+                    value="Verify">
+            </div>
+        </section>
+    </main>
+    <script>
+        textFit(document.querySelector(".tag"), {
+            minFontSize: 2,
+            multiLine: true
+        });
+
+        textFit(document.querySelector(".cd-info"), {
+            minFontSize: 2,
+            multiLine: true
+        });
+
+        $("input").focus(function (){
+            $(".likeaneagle").css("border-bottom", "2px solid #276D8F")
+        })
+
+        $("input").focusout(function (){
+            $(".likeaneagle").css("border-bottom", "1px solid #dddddd")
+        })
+
+        $("#numputu").keyup(function () {
+            const key = event.key;
+            if (key === 'Backspace') {
+                $(this).focus()
+            } else {
+                $("#numputd").focus();
+            }
+        })
+
+        $("#numputd").keyup(function () {
+            const key = event.key;
+            if (key === 'Backspace') {
+                $(this).focus()
+            } else {
+                $("#numputt").focus();
+            }
+        })
+
+        $("#numputt").keyup(function () {
+            const key = event.key;
+            if (key === 'Backspace') {
+                $(this).focus()
+            } else {
+                $("#numputq").focus();
+            }
+        })
+
+        var count = 0;
+        $("#numputq").keyup(function () {
+            const key = event.key;
+            if (key === 'Backspace') {
+                count++;
+                if (count == 2) {
+                    $("#numputt").focus();
+                    count = 0;
+                }
+            }
+        })
+
+        $("#numputt").keyup(function () {
+            const key = event.key;
+            if (key === 'Backspace') {
+                count++;
+                if (count == 2) {
+                    $("#numputd").focus();
+                    count = 0;
+                }
+            }
+        })
+
+        $("#numputd").keyup(function () {
+            const key = event.key;
+            if (key === 'Backspace') {
+                count++;
+                if (count == 2) {
+                    $("#numputu").focus();
+                    count = 0;
+                }
+            }
+        })
+
+        $("#numputq").keyup(function () {
+            const key = event.key;
+            if (key === 'ArrowLeft') {
+                $("#numputt").focus();
+            }
+        })
+
+        $("#numputt").keyup(function () {
+            const key = event.key;
+            if (key === 'ArrowLeft') {
+                $("#numputd").focus();
+            }
+        })
+
+        $("#numputd").keyup(function () {
+            const key = event.key;
+            if (key === 'ArrowLeft') {
+                $("#numputu").focus();
+            }
+        })
+
+    </script>
+</body>
+
+</html>
