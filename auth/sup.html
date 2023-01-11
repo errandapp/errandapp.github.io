@@ -27,7 +27,7 @@
 
         ::-webkit-input-placeholder {
             font-size: 1.6rem;
-            font-family: Roboto, sans-serif;
+            font-family: 'Lato', Tahoma, sans-serif;
             font-weight: normal;
             color: #6c757d;
         }
@@ -54,7 +54,6 @@
 
         div.input-block input {
             font-size: 1.6rem;
-            color: #1F1E20;
             height: 57px;
             width: 100%;
             /* margin-bottom:  30px; */
@@ -69,7 +68,7 @@
             position: absolute;
             margin: 17px 0;
             padding: 0 4px;
-            font-family: Roboto, sans-serif;
+               font-family: 'Lato', Tahoma, sans-serif;
 
             color: #6c757d;
 
@@ -93,7 +92,7 @@
         }
 
         div.input-block input:focus {
-            color: #1F1E20;
+            color: #000000;
             border-bottom: 2px solid #276D8F;
 
         }
@@ -185,16 +184,16 @@
             justify-content: center;
         }
 
-        .green-giant{
+        .green-giant {
             position: absolute;
-            width:  80%;
-            margin-left:  10%;
+            width: 80%;
+            margin-left: 10%;
             top: 80%;
         }
 
-        #submit{
-         opacity:  0.5;
-      }
+        #submit {
+            opacity: 0.5;
+        }
     </style>
 </head>
 
@@ -225,13 +224,16 @@
                             Last name
                         </span>
                     </div>
-                    <div style="color: #276D8F;  height:  25px; font-size: 1.5rem; text-align: left; font-family: 'Lato', Tahoma, sans-serif; margin-top:  10px;">Carry on as a
-                        dispatch customer</div>
+                    <div
+                        style="color: #276D8F;  height:  25px; font-size: 1.5rem; text-align: left; font-family: 'Lato', Tahoma, sans-serif; margin-top:  10px;">
+                        Sign up as an Erranda Taskwalker <br><div style="color: #6c757d; margin-top: 10px; font-size: 1.25rem;">Learn more</div></div>
                 </form>
-            </section>             <div class="green-giant">
-                        
-                        <input type="submit" id="submit" disabled="disabled" style="font-family: 'Lato', Tahoma, sans-serif" value="Next">
-                    </div>
+            </section>
+            <div class="green-giant">
+
+                <input type="submit" id="submit" disabled="disabled" style="font-family: 'Lato', Tahoma, sans-serif"
+                    value="Next">
+            </div>
         </section>
     </main>
     <script>
@@ -241,51 +243,51 @@
         });
 
         $(".email").focus(function () {
-         $(".email").attr("placeholder", "Eleanor");
-         $('#viewmail').css("color", "#276D8F");
-      })
+            $(".email").attr("placeholder", "Eleanor");
+            $('#viewmail').css("color", "#276D8F");
+        })
 
-      $(".email").focusout(function () {
-         $(".email").attr("placeholder", "");
-         $('#viewmail').css("color", "#6c757d");
-      })
+        $(".email").focusout(function () {
+            $(".email").attr("placeholder", "");
+            $('#viewmail').css("color", "#6c757d");
+        })
 
-      $(".password").focus(function () {
-         $(".password").attr("placeholder", "Barlowe")
-         $('#passicon').css("color", "#276D8F");
-      })
+        $(".password").focus(function () {
+            $(".password").attr("placeholder", "Barlowe")
+            $('#passicon').css("color", "#276D8F");
+        })
 
-      $(".password").focusout(function () {
-         $(".password").attr("placeholder", "")
-         $('#passicon').css("color", "#6c757d");
-      })
+        $(".password").focusout(function () {
+            $(".password").attr("placeholder", "")
+            $('#passicon').css("color", "#6c757d");
+        })
 
 
 
-     $(document).ready(function () {
-         var validRegex = /^[0-9a-zA-Z]+$/;
-         empty = true;
+        $(document).ready(function () {
+            var validRegex = /^[0-9a-zA-Z]+$/;
+            empty = true;
 
-         $('input').keyup(function () {
-            var empty = false;
-            $('input').each(function () {
-               if ($(this).val().length == 0 || $(this).val() == " " || !document.querySelector(".email").value.match(validRegex)) {
-                  empty = true;
-               }
-            });
+            $('input').keyup(function () {
+                var empty = false;
+                $('input').each(function () {
+                    if ($(this).val().length == 0 || $(this).val() == " " || !document.querySelector(".email").value.match(validRegex)) {
+                        empty = true;
+                    }
+                });
 
-            if (empty) {
-               $('input[type="submit"]').attr('disabled', 'disabled');
-               $("#submit").css("opacity", "0.5")
-            } else {
-               $('input[type="submit"]').removeAttr('disabled');
-               $("#submit").css("opacity", "1")
-                    $("#submit").click(function () {  
+                if (empty) {
+                    $('input[type="submit"]').attr('disabled', 'disabled');
+                    $("#submit").css("opacity", "0.5")
+                } else {
+                    $('input[type="submit"]').removeAttr('disabled');
+                    $("#submit").css("opacity", "1")
+                    $("#submit").click(function () {
                         window.open("sup-2.html", "_self")
                     })
-            }
-         });
-      });
+                }
+            });
+        });
     </script>
 </body>
 
