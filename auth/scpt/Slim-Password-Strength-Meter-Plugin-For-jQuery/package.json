@@ -1,0 +1,70 @@
+{
+  "name": "password-strength-meter",
+  "version": "2.1.0",
+  "description": "A password strength meter plugin for jQuery",
+  "main": "dist/password.min.js",
+  "scripts": {
+    "test": "eslint src && jest",
+    "postversion": "git push && git push --tags && npm publish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/elboletaire/password-strength-meter.git"
+  },
+  "keywords": [
+    "jquery-plugin",
+    "ecosystem:jquery",
+    "jquery",
+    "plugin",
+    "password",
+    "strength",
+    "meter",
+    "form",
+    "forms"
+  ],
+  "author": "Òscar Casajuana <elboletaire@gmail.com> (https://github.com/elboletaire)",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/elboletaire/password-strength-meter/issues"
+  },
+  "homepage": "https://github.com/elboletaire/password-strength-meter#readme",
+  "devDependencies": {
+    "brfs": "^2.0.2",
+    "eslint": "^6.8.0",
+    "gulp": "^4.0.2",
+    "gulp-chmod": "^3.0.0",
+    "gulp-clean": "^0.4.0",
+    "gulp-clean-css": "^4.2.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-replace": "^1.0.0",
+    "gulp-uglify": "^3.0.2",
+    "jest": "^25.1.0",
+    "jquery": "^3.1.1"
+  },
+  "peerDependencies": {
+    "jquery": ">=1.14.0"
+  },
+  "files": [
+    "dist",
+    "LICENSE.md",
+    "src/example.png"
+  ],
+  "jest": {
+    "testMatch": [
+      "<rootDir>/test/**/?*.(spec|test).{js,jsx,mjs}"
+    ],
+    "transformIgnorePatterns": [
+      "[/\\\\]node_modules[/\\\\].+\\.(js|jsx|mjs)$"
+    ],
+    "testEnvironment": "jsdom",
+    "moduleFileExtensions": [
+      "web.js",
+      "mjs",
+      "js",
+      "json",
+      "web.jsx",
+      "jsx",
+      "node"
+    ]
+  }
+}
