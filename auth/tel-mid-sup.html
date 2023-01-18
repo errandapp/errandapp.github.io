@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#ffffff" />
+    <title>erranda.</title>
+    <script src="scpt/jquery-3.6.1.min.js"></script>
+    <script src="https://kit.fontawesome.com/335f0c7037.js" crossorigin="anonymous"></script>
+    <script src="scpt/jQuery-Plugin-For-Fitting-Text-To-Its-Container-textFit/textFit.min.js"></script>
+    <link rel="stylesheet" href="scpt/country-select-js-master/country-select-js-master/build/css/countrySelect.css">
+    <link rel="stylesheet" href="scpt/country-select-js-master/country-select-js-master/build/css/demo.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="scpt/intl-tel-input-master/build/css/intlTelInput.css">
+
+    <style>
+        html,
+        body {
+            margin: 0px;
+            padding: 0px;
+            height: 100%;
+            user-select: none;
+        }
+
+        div.input-block {
+            position: relative;
+        }
+
+
+
+        div.input-block input {
+            font-size: .9rem;
+            color: #1F1E20;
+            height: 57px;
+            width: 100%;
+            /* margin-bottom:  30px; */
+            box-sizing: border-box;
+            border: none;
+            padding: 0 54px;
+            font-family: 'Lato', Tahoma, sans-serif;
+            border-bottom: 1px solid #dddddd;
+            outline: none;
+        }
+
+        div.input-block span.placeholder {
+            position: absolute;
+            margin: 17px 0;
+            padding: 0 4px;
+            font-family: 'Lato', Tahoma, sans-serif;
+
+            color: #6c757d;
+
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+
+            top: 4px;
+            left: 50px;
+            transition: all 0.2s;
+            transform-origin: 0% 0%;
+            background: none;
+            pointer-events: none;
+        }
+
+        div.input-block input:valid+span.placeholder,
+        div.input-block input:focus+span.placeholder {
+            transform: scale(0.9) translateY(-40px) translateX(-57px);
+            background: rgba(255, 255, 255, 0);
+        }
+
+        div.input-block input:focus {
+            color: #1F1E20;
+            border-bottom: 2px solid #276D8F;
+
+        }
+
+        div.input-block input:focus+span.placeholder {
+            color: #276D8F;
+        }
+
+
+        ::-webkit-input-placeholder {
+            font-size: 14px;
+            font-family: 'Lato', Tahoma, sans-serif;
+            font-weight: normal;
+            color: #6c757d;
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk&display=swap');
+
+        * {
+            font-family: 'Lato', Tahoma, sans-serif;
+        }
+
+        #return {
+            display: none;
+            font-size: small;
+        }
+
+        @media (min-width: 769px) {
+            #bkground {
+                display: none;
+            }
+
+            #fsection {
+                display: none;
+            }
+
+            #return {
+                display: inline;
+                padding: 5px;
+            }
+        }
+
+        #bkground {
+            width: 100%;
+            height: 100%;
+        }
+
+        .maindiv {
+            width: 80%;
+            height: max-content;
+            margin-left: 10%;
+            padding: 10px;
+            box-sizing: border-box;
+            background-color: transparent;
+            /* border: 1px solid black; */
+        }
+
+        .secst {
+            font-size: 1.6rem;
+            color: #1F1E20;
+            height: 57px;
+            width: 100%;
+            box-sizing: border-box;
+            border: none;
+            outline: none;
+        }
+
+        /* #demo{
+            width:  100%;
+        } */
+
+
+
+        .welcomess {
+            width: 100%;
+            height: max-content;
+            display: flex;
+            margin-top: 15%;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 10px;
+        }
+
+        .tag {
+            width: 55%;
+            height: 55px;
+            text-align: center;
+        }
+
+        .green-giant {
+            position: absolute;
+            width: 80%;
+            margin-left: 10%;
+            top: 80%;
+        }
+
+        #submit {
+            opacity: 0.5;
+        }
+
+        #submit {
+            width: 100%;
+            height: 57px;
+            font-size: 1rem;
+            transition: all 0.2s;
+            border: none;
+            border-radius: 10px;
+            background-color: #276D8F;
+            color: white;
+        }
+
+        .viewpas {
+            height: 55px;
+            width: max-content;
+            display: flex;
+            align-items: center;
+            position: relative;
+            bottom: 55px;
+            left: 10px;
+        }
+
+        ::-webkit-input-placeholder {
+            font-size: 1rem;
+            font-family: 'Lato', Tahoma, sans-serif;
+            color: #6c757d;
+        }
+        
+        #ximg{
+            position: relative; 
+            top:  20%;
+            width:  40%;
+        }
+
+    </style>
+</head>
+
+<body>
+    <span id="return">
+        <span style="font-size: 150%; font-weight:bold;">Swift Courier</span>
+        <br>&nbsp; I'm an app, use mobile view instead.
+    </span>
+
+    <main id="bkground">
+        <div style="height:  25%; width:  100%; display: flex; justify-content: center; align-items: flex-end;">
+            <img id="ximg" src="imgs/undraw_mobile_encryption_re_yw3o.svg" alt="">
+        </div>
+        <section class="welcomess">
+            <div class="tag" style="font-family: 'Lato', Tahoma, sans-serif">  Verify your phone number
+            </div>
+        </section>
+        <div class="maindiv">
+            <div id="demo" data-input-name="country" data-button-size="btn-lg" data-button-type="btn-warning"
+                data-scrollable="true" data-scrollable-height="250px">
+            </div>
+            <form>
+                <div style="font-size: 1rem; transform: scale(0.9);  position: relative; right: 3.9%; color: #276D8F;">
+                    Telephone
+                </div>
+                <div id="input-block">
+                    <input type="tel" name="" id="phone">     <span style=" color:#6c757d; font-size: .75rem; position: relative; top:  10px;">We'll send an SMS verification code to your telephone number</span>
+                </div>
+            </form>
+
+            <div id="country-1"></div>
+            <div id="country-2"></div>
+        </div>
+        <div class="green-giant">
+
+            <input type="submit" id="submit" disabled="disabled" style="font-family: 'Lato', Tahoma, sans-serif"
+                value="Next">
+           
+        </div>
+    </main>
+    <script src="scpt/country-select-js-master/country-select-js-master/build/js/countrySelect.min.js"></script>
+    <script src="scpt/country-select-js-master/country-select-js-master/build/js/countrySelect.js"></script>
+    <script src="scpt/intl-tel-input-master/build/js/intlTelInput.js"></script>
+
+    <script>
+
+        textFit(document.querySelector(".tag"), {
+            minFontSize: 2,
+            multiLine: true
+        });
+
+        var country1 = 'us';
+
+        fetch('https://ipapi.co/country')
+            .then(function (response) {
+                return response.text();
+            })
+            .then(function (data) {
+                if (data == country1) {
+                    var el = document.getElementById('country-1');
+
+                    $("#country_selector").countrySelect({
+                        defaultCountry: [country1],
+                        // onlyCountries: ['us', 'gb', 'ch', 'ca', 'do'],
+                        // responsiveDropdown: true,
+                        preferredCountries: ['ca', 'gb', 'us'],
+                    });
+
+                    var input = document.querySelector("#phone");
+                    window.intlTelInput(input, {
+                        initialCountry: rita,
+                        separateDialCode: true,
+                        utilsScript: "scpt/intl-tel-input-master/build/js/utils.js",
+                    });
+                    // instance.destroy();
+                    // instance.setNumber("+44 7733 123 456");
+                    // Optionally redirect to country specific subdomain
+                    // window.location.href = "http://country1.example.com";
+                } else {
+                    var el = document.getElementById('country-2');
+
+
+
+                    var rita = data.toLowerCase();
+
+                    $("#country_selector").countrySelect({
+                        defaultCountry: rita,
+                        // onlyCountries: ['us', 'gb', 'ch', 'ca', 'do'],
+                        // responsiveDropdown: true,
+                        preferredCountries: ['ca', 'gb', 'us'],
+                    });
+
+                    // Optionally redirect to country specific subdomain
+                    // window.location.href = "http://country2.example.com";
+                    var input = document.querySelector("#phone");
+                    window.intlTelInput(input, {
+                        initialCountry: rita,
+                        separateDialCode: true,
+                        utilsScript: "scpt/intl-tel-input-master/build/js/utils.js",
+                    });
+                    // instance.destroy();
+                    // instance.setNumber("+44 7733 123 456");
+                }
+            });
+
+        $(document).ready(function () {
+            var mDivH = $(".maindiv").innerWidth();
+            $("input").css("width", +mDivH + "px");
+        })
+
+
+        $(document).ready(function () {
+         var validRegex = /^\d+$/;
+         empty = true;
+
+         $('#phone').keyup(function () {
+            var empty = false;
+            $('#phone').each(function () {
+               if ($(this).val().length == 0 || $(this).val() == " " || !document.querySelector("#phone").value.match(validRegex)) {
+                  empty = true;
+               }
+            });
+
+            if (empty) {
+               $('input[type="submit"]').attr('disabled', 'disabled');
+               $("#submit").css("opacity", "0.5")
+            } else {
+               $('input[type="submit"]').removeAttr('disabled');
+               $("#submit").css("opacity", "1")
+               $("#submit").click(function () {
+                        window.open("sup-3.html", "_self")
+                    })
+            }
+         });
+      });
+
+    </script>
+</body>
+
+</html>
