@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#ffffff" />
+    <title>erranda.</title>
+    <script src="scpt/jquery-3.6.1.min.js"></script>
+    <script src="https://kit.fontawesome.com/335f0c7037.js" crossorigin="anonymous"></script>
+    <script src="scpt/jQuery-Plugin-For-Fitting-Text-To-Its-Container-textFit/textFit.min.js"></script>
+    <script src="scpt/Slim-Password-Strength-Meter-Plugin-For-jQuery/src/password.css"></script>
+    <script src="scpt/Slim-Password-Strength-Meter-Plugin-For-jQuery/src/password.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk&display=swap" rel="stylesheet">
+    <style>
+        html,
+        body {
+            margin: 0px;
+            padding: 0px;
+            height: 100%;
+            user-select: none;
+        }
+
+        ::-webkit-input-placeholder {
+            font-size: 1.6rem;
+            font-family: 'Lato', Tahoma, sans-serif;
+            font-weight: normal;
+            color: #6c757d;
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk&display=swap');
+
+
+        * {
+            font-family: 'Lato', Tahoma, sans-serif;
+        }
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-size: 62.5%;
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+        div.input-block {
+            position: relative;
+        }
+
+        div.input-block input {
+            font-size: 1.9rem;
+            height: 57px;
+            width: 100%;
+            /* margin-bottom:  30px; */
+            box-sizing: border-box;
+            border: none;
+            padding: 0 30px;
+            border-bottom: 1px solid #dddddd;
+            outline: none;
+        }
+
+        div.input-block span.placeholder {
+            position: absolute;
+            margin: 17px 0;
+            padding: 0 4px;
+            font-family: 'Lato', Tahoma, sans-serif;
+
+            color: #6c757d;
+
+            display: flex;
+            align-items: center;
+
+            font-size: 1.6rem;
+
+            top: 4px;
+            left: 24px;
+            transition: all 0.2s;
+            transform-origin: 0% 0%;
+            background: none;
+            pointer-events: none;
+        }
+
+        div.input-block input:valid+span.placeholder,
+        div.input-block input:focus+span.placeholder {
+            transform: scale(0.9) translateY(-40px) translateX(-30px);
+            background: rgba(255, 255, 255, 0);
+        }
+
+        div.input-block input:focus {
+            color: #000000;
+            border-bottom: 2px solid #276D8F;
+
+        }
+
+        div.input-block input:focus+span.placeholder {
+            color: #276D8F;
+        }
+
+        #return {
+            display: none;
+            font-size: small;
+        }
+
+        @media (min-width: 769px) {
+            #bkground {
+                display: none;
+            }
+
+            #fsection {
+                display: none;
+            }
+
+            #return {
+                display: inline;
+                padding: 5px;
+            }
+        }
+
+        #bkground {
+            width: 100%;
+            height: 100%;
+        }
+
+
+        #bsect {
+            width: 100%;
+            height: 100%;
+            background-color: #ffffff;
+        }
+
+        .welcomess {
+            width: 100%;
+            height: max-content;
+            display: flex;
+            margin-top: 15%;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .tag {
+            width: 55%;
+            height: 55px;
+            text-align: center;
+        }
+
+        #signform {
+            width: 80%;
+            height: max-content;
+            padding: 10px;
+            margin-left: 10%;
+            background-color: transparent;
+            position: relative;
+            top: 10px;
+            /* border: 1px solid black; */
+        }
+
+
+
+        #submit {
+            width: 100%;
+            height: 57px;
+            transition: all 0.2s;
+            font-size: 1.6rem;
+            border: none;
+            border-radius: 10px;
+            background-color: #276D8F;
+            color: white;
+        }
+
+        .ho {
+            height: max-content;
+            width: 100%;
+        }
+
+        .green {
+            width: 100%;
+            height: max-content;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .green-giant {
+            position: absolute;
+            width: 80%;
+            margin-left: 10%;
+            top: 80%;
+        }
+
+        #submit {
+            opacity: 0.5;
+        }
+
+        .pass-text{
+            font-size:  1.6rem;
+            position: relative;
+            top: 10px;
+            color:  #6c757d;
+        }
+
+        #ximg{
+            position: relative; 
+            top:  20%;
+            width:  40%;
+        }
+      
+    </style>
+</head>
+
+<body>
+    <span id="return">
+        <span style="font-size: 150%; font-weight:bold;">Swift Courier</span>
+        <br>&nbsp; I'm an app, use mobile view instead.
+    </span>
+    <main id="bkground">
+        <div style="height:  25%; width:  100%; display: flex; justify-content: center; align-items: flex-end;">
+            <img id="ximg" src="imgs/undraw_takeout_boxes_ap54.svg" alt="">
+        </div>
+        <section id="bsect">
+            <section class="welcomess">
+                <div class="tag" style="font-family: 'Lato', Tahoma, sans-serif">One last thing, create a password
+                </div>
+            </section>
+            <section id="signform">
+                <form action="a." method="post" id="validate">
+                    <div style="width:  100%; height:  max-content; ">
+                    <div id="warn" style="font-size: 14px; justify-self: left; ">Minimum characters: 8</div>
+                </div>
+                    <div class="input-block" style="margin-bottom: 30px">
+                        <input type="password"  style="letter-spacing:  5px;" class="passlord"
+                            autocomplete="off"  spellcheck="false" name="input-text" class="inp" placeholder=""
+                            id="input-text" required spellcheck="false">
+                        <span class="placeholder">
+                            Password
+                        </span>
+
+
+                    </div>
+                </form>
+            </section>
+            <div class="green-giant">
+
+                <input type="submit" id="submit" disabled="disabled" style="font-family: 'Lato', Tahoma, sans-serif"
+                    value="So let's erranda">
+            </div>
+        </section>
+    </main>
+    <script>
+        textFit(document.querySelector(".tag"), {
+            minFontSize: 2,
+            multiLine: true
+        });
+
+
+        $('.passlord').password({
+
+            enterPass: 'Type a password',
+            shortPass: 'You can make it better! 🤕',
+            containsField: 'The password contains your username',
+            steps: {
+                13: 'Yep, still needs improvement! 😃',
+                33: 'Try combining more letters & numbers 🙄',
+                67: "Yeah! That's better! 🙂",
+                94: 'Yups, you made it 🙃',
+            },
+            showText: true,
+            animate: true,
+            animateSpeed: 'fast',
+            fieldPartialMatch: true,
+            minimumLength: 8,
+            closestSelector: 'div',
+        });
+
+
+      
+        $(".passlord").focus(function () {
+            $(".passlord").keyup(function () {
+                let decideBot = $(".pass-text").html();
+                if(decideBot =="Yeah! That's better! 🙂" || decideBot == "Yups, you made it 🙃"){
+                   $("#submit").css("opacity", "1");
+                   $('#submit').removeAttr('disabled');
+                } else {
+                    $("#submit").css("opacity", "0.5");
+                    $("#submit").attr('disabled', 'disabled');
+                }
+            })
+        })
+
+        $(".passlord").focus(function () {
+            $(".passlord").attr("placeholder", "●●●●●●●●");
+            $('#viewmail').css("color", "#276D8F");
+            $("#warn").css("opacity", "0");
+        })
+
+        $(".passlord").focusout(function () {
+            $(".passlord").attr("placeholder", "");
+            $('#viewmail').css("color", "#6c757d");
+            $("#warn").css("opacity", "1");
+          
+        })
+
+        $(".passlord").focus(function () {
+            $(".passlord").attr("placeholder", "●●●●●●●●")
+            $('#passicon').css("color", "#276D8F");
+            $("#warn").css("opacity", "0");
+        })
+
+        $(".passlord").focusout(function () {
+            $(".passlord").attr("placeholder", "")
+            $('#passicon').css("color", "#6c757d");  $("#warn").css("opacity", "1");
+        })
+
+        $(".passlord").keyup(function (){
+            $(".passlord").focusout(function () {
+                if($(".passlord").val() != null){
+                    $("#warn").css("opacity", "0");
+                }
+              })
+        })
+       
+        // $("#submit").click(function () {
+        //     window.open("sup-2.html", "_self")
+        // })
+    </script>
+</body>
+
+</html>
