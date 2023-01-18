@@ -203,6 +203,12 @@
             top: 3px;
             color: #6c757d;
         }
+
+        #ximg{
+            position: relative; 
+            top:  20%;
+            width:  40%;
+        }
     </style>
 </head>
 
@@ -213,27 +219,16 @@
     </span>
 
     <main id="bkground">
+        <div style="height:  25%; width:  100%; display: flex; justify-content: center; align-items: flex-end;">
+            <img id="ximg" src="imgs/undraw_step_to_the_sun_nxqq.svg" alt="">
+        </div>
         <section class="welcomess">
-            <div class="tag" style="font-family: 'Lato', Tahoma, sans-serif"> One more step left..
+            <div class="tag" style="font-family: 'Lato', Tahoma, sans-serif"> Few more steps left..
             </div>
         </section>
         <div class="maindiv">
-            <div id="demo" data-input-name="country" data-button-size="btn-lg" data-button-type="btn-warning"
-                data-scrollable="true" data-scrollable-height="250px">
-            </div>
             <form>
-                <div style="font-size: 1rem; transform: scale(0.9);  position: relative; right: 3.9%; color: #276D8F;">
-                    Country</div>
-                <div class="form-item">
-                    <input id="country_selector" type="text">
-                    <label for="country_selector" style="display:none;">Select a country here...</label>
-                </div>
-                <div class="form-item" style="display:none;">
-                    <input type="text" id="country_selector_code" name="country_selector_code" data-countrycodeinput="1"
-                        readonly="readonly" placeholder="Selected country code will appear here" />
-                    <label for="country_selector_code">...and the selected country code will be updated here</label>
-                </div>
-                <div class="input-block" style="margin-top: 25px; margin-bottom: 30px">
+                <div class="input-block" >
                     <input type="text" class="email" autocomplete="off" autofocus spellcheck="false" name="input-text"
                         class="inp" placeholder="mars@milkyway.com" id="input-text" required spellcheck="false">
                     <span class="placeholder">
@@ -244,6 +239,19 @@
                     </div>
                 </div>
 
+                <div style="position: relative; bottom: 15px;">
+                <div style="font-size: 1rem; transform: scale(0.9);  position: relative; right: 3.9%; color: #276D8F;">
+                    Country</div>
+                <div class="form-item" >
+                    <input id="country_selector" type="text">
+                    <label for="country_selector" style="display:none;">Select a country here...</label>
+                </div>
+                <div class="form-item" style="display:none;">
+                    <input type="text" id="country_selector_code" name="country_selector_code" data-countrycodeinput="1"
+                        readonly="readonly" placeholder="Selected country code will appear here" />
+                    <label for="country_selector_code">...and the selected country code will be updated here</label>
+                </div>
+            </div>
             </form>
 
             <div id="country-1"></div>
@@ -342,9 +350,9 @@
          var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
          empty = true;
 
-         $('input').keyup(function () {
+         $('.email').keyup(function () {
             var empty = false;
-            $('input').each(function () {
+            $('.email').each(function () {
                if ($(this).val().length == 0 || $(this).val() == " " || !document.querySelector(".email").value.match(validRegex)) {
                   empty = true;
                }
@@ -356,6 +364,9 @@
             } else {
                $('input[type="submit"]').removeAttr('disabled');
                $("#submit").css("opacity", "1")
+               $("#submit").click(function () {
+                        window.open("tel-mid-sup.html", "_self")
+                    })
             }
          });
       });
