@@ -26,7 +26,7 @@
         }
 
         ::-webkit-input-placeholder {
-            font-size: 2.5rem;
+            font-size: 1.6rem;
             font-family: 'Lato', Tahoma, sans-serif;
             color: #6c757d;
             text-align: center
@@ -164,19 +164,23 @@
 
         input[type=text] {
             outline: none;
-            width: 50px;
-            height: 50px;
+            width: 30px;
+            height: 30px;
             margin: 5px;
+            box-sizing: border-box;
+            padding:  5px;
             color:  #6c757d;
             border: none;
             text-align: center;
-            font-size: 2.5rem;
+            font-size: 1.6rem;
             border-bottom: 2px solid #dddddd;
         }
         
 
         #ximg{
-            width:  50%;
+            position: relative; 
+            top:  20%;
+            width:  40%;
         }
     </style>
 </head>
@@ -187,34 +191,31 @@
         <br>&nbsp; I'm an app, use mobile view instead.
     </span>
     <main id="bkground">
+        <div style="height:  25%; width:  100%; display: flex; justify-content: center; align-items: flex-end;">
+            <img id="ximg" src="imgs/undraw_message_sent_re_q2kl.svg" alt="">
+        </div>
         <section id="bsect">
             <section class="welcomess">
-                <div class="tag">
-                    <img id="ximg" src="imgs/undraw_mail_sent_re_0ofv.svg" alt="">
+                <div class="tag" style="font-family: 'Lato', Tahoma, sans-serif">Enter the SMS verification code
                 </div>
             </section>
-            <section class="main-cd">
-                <div class="cd-cover">
-                    <div class="cd-info">
-                        Type the four digit code <br> sent to <br> <span style="color: #6c757d; font-size: inherit;"> jeremy.@games.com </span>
-                    </div>
-                </div>
+                <div style="font-size: 1.25rem; color: #6c757d; margin-top:  10px; width: 100%; text-align: center;">To: (303) 487 - 839 -32</div>
                 <div class="code">
-                    <input type="text" oninput="this.value=this.value.replace(/[^0-9]/g, '');" maxlength="1" class="likeaneagle" autofocus name="" id="numputu">
-                    <input type="text" oninput="this.value=this.value.replace(/[^0-9]/g, '');" class="likeaneagle" maxlength="1" name=""  id="numputd">
-                    <input type="text" oninput="this.value=this.value.replace(/[^0-9]/g, '');" class="likeaneagle" maxlength="1" name=""  id="numputt">
-                    <input type="text" oninput="this.value=this.value.replace(/[^0-9]/g, '');" class="likeaneagle" maxlength="1" name=""  id="numputq">
+                    <input type="text" oninput="this.value=this.value.replace(/[^0-9]/g, '');" maxlength="1" class="likeaneagle" autofocus name="" id="numputu" placeholder="✱">
+                    <input type="text" oninput="this.value=this.value.replace(/[^0-9]/g, '');" class="likeaneagle" maxlength="1" name=""  id="numputd" placeholder="✱">
+                    <input type="text" oninput="this.value=this.value.replace(/[^0-9]/g, '');" class="likeaneagle" maxlength="1" name=""  id="numputt" placeholder="✱">
+                    <input type="text" oninput="this.value=this.value.replace(/[^0-9]/g, '');" class="likeaneagle" maxlength="1" name=""  id="numputq" placeholder="✱">
                 </div>
+                <div style="font-size: 1.25rem; color: #6c757d; margin-top:  10px; height: max-content; width: 100%; text-align: center;"><span style="font-size: inherit;">Resend code?</span><span style="font-size: inherit; margin-left: 50px;;">Resend via tel?</span></div>
             
-            </section>       <div style="width:  100%; margin-top: 15px; font-size: 1.6rem; color: #6c757d; display: flex; justify-content: center; text-align: center;">Resend code</div>
-                <div style="position: absolute; width:  100%; top: 93%; font-size: 1.4rem; color: #276D8F;text-align: center; width: 100%; display: flex; justify-content: center;">Edit email</div>
+            </section> 
         </section>
      
     </main>
     <script>
 
 
-        textFit(document.querySelector(".cd-info"), {
+        textFit(document.querySelector(".tag"), {
             minFontSize: 2,
             multiLine: true
         });
