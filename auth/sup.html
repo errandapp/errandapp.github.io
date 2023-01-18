@@ -167,6 +167,7 @@
             font-size: 1.6rem;
             border: none;
             border-radius: 10px;
+            transition: all 0.2s;
             background-color: #276D8F;
             color: white;
         }
@@ -185,14 +186,17 @@
         }
 
         .green-giant {
-            position: absolute;
-            width: 80%;
-            margin-left: 10%;
-            top: 80%;
+            width: 100%;
+            margin-top:  50px;
         }
 
         #submit {
             opacity: 0.5;
+        }
+        #ximg{
+            position: relative; 
+            top:  20%;
+            width:  40%;
         }
     </style>
 </head>
@@ -203,13 +207,16 @@
         <br>&nbsp; I'm an app, use mobile view instead.
     </span>
     <main id="bkground">
+        <div style="height:  25%; width:  100%; display: flex; justify-content: center; align-items: flex-end;">
+            <img id="ximg" src="imgs/undraw_people_re_8spw.svg" alt="">
+        </div>
         <section id="bsect">
             <section class="welcomess">
-                <div class="tag" style="font-family: 'Lato', Tahoma, sans-serif">Let's start with some basic info
+                <div class="tag" style="font-family: 'Lato', Tahoma, sans-serif">Start with some basic info
                 </div>
             </section>
             <section id="signform">
-                <form method="post" id="validate">
+                <form action="sup-2.html" id="validate">
                     <div class="input-block" style="margin-bottom: 30px">
                         <input type="text" class="email" autocomplete="off" autofocus spellcheck="false"
                             name="input-text" class="inp" placeholder="" id="input-text" required spellcheck="false">
@@ -226,14 +233,14 @@
                     </div>
                     <div
                         style="color: #276D8F;  height:  25px; font-size: 1.5rem; text-align: left; font-family: 'Lato', Tahoma, sans-serif; margin-top:  10px;">
-                        Sign up as an Erranda Taskwalker <br><div style="color: #6c757d; margin-top: 10px; font-size: 1.25rem;">Learn more</div></div>
-                </form>
-            </section>
-            <div class="green-giant">
+                        Continue sign up as erranda taskwalker <br><div style="color: #6c757d; opacity: 7; margin-top: 10px; font-size: 1.25rem;">Who's a taskwalker?</div><div class="green-giant">
 
                 <input type="submit" id="submit" disabled="disabled" style="font-family: 'Lato', Tahoma, sans-serif"
                     value="Next">
-            </div>
+            </div></div>
+                </form>
+            </section>
+            
         </section>
     </main>
     <script>
@@ -282,9 +289,6 @@
                 } else {
                     $('input[type="submit"]').removeAttr('disabled');
                     $("#submit").css("opacity", "1")
-                    $("#submit").click(function () {
-                        window.open("sup-2.html", "_self")
-                    })
                 }
             });
         });
