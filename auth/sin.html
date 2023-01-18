@@ -25,7 +25,7 @@
       
       ::-webkit-input-placeholder {
          font-size: 1.6rem;
-         font-family: Roboto, sans-serif;
+         font-family: 'Lato', Tahoma, sans-serif;
          font-weight: normal;
          color: #6c757d;
       }
@@ -107,6 +107,7 @@
          width: 100%;
          height: 57px;
          outline: none;
+         transition: all 0.2s;
          color: white;
          font-size: 1.6rem;
          background-color: #276D8F;
@@ -190,7 +191,7 @@
       .lg{
          height: 30px;
          width:  30px;
-         opacity:  0.5;
+         opacity:  0.7;
          margin-left:  15px; margin-right:  15px;
       }
 
@@ -220,7 +221,7 @@
       </section>
       <section id="bsect">
          <div class="loginfield">
-            <div style="height: 50px;  position: relative; top: 3.5px; display: flex; align-items: center; justify-content: center; z-index: 2;  font-family: 'Lato', Tahoma, sans-serif;font-size: 2.5rem; text-align: center;">What’s crackin’</div>
+            <div style="height: 50px;  position: relative; top: 3.5px; display: flex; align-items: center; justify-content: center; z-index: 2;  font-family: 'Lato', Tahoma, sans-serif;font-size: 2.5rem; text-align: center; color: #1E1E1E;">What’s crackin’</div>
             <form action="app" method="post" id="validate">
                <div class="viewpas"><i id="viewmail" class="fa-solid fa-envelope" style="background-color: transparent; color: #6c757d; font-size: 18px;"></i>
                </div>
@@ -236,7 +237,7 @@
                   <input type="password" autocomplete="off"
                   spellcheck="false" class="password" placeholder="" style="position: relative; bottom: 12.5px;"
                      name="input-text" id="input-text" required spellcheck="false">
-                  <span class="placeholde" style="position: absolute; top: -10px;">
+                  <span class="placeholde" style="position: absolute;  top: -10px;">
                      Password
                   </span>
                </div> <!--this-->
@@ -278,7 +279,7 @@
       })
 
       $(".password").focus(function () {
-         $(".password").attr("placeholder", "● ● ● ● ● ● ●")
+         $(".password").attr("placeholder", "● ● ● ● ● ● ● ●")
          $('#passicon').css("color", "#276D8F");
       })
 
